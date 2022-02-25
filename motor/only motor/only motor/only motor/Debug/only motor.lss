@@ -1,0 +1,2956 @@
+
+only motor.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00001300  00000000  00000000  00000054  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000000  00800060  00800060  00001354  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .comment      00000030  00000000  00000000  00001354  2**0
+                  CONTENTS, READONLY
+  3 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00001384  2**2
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000028  00000000  00000000  000013c0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   000028fb  00000000  00000000  000013e8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 000005d4  00000000  00000000  00003ce3  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   000008d8  00000000  00000000  000042b7  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000090  00000000  00000000  00004b90  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    000003b3  00000000  00000000  00004c20  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    000006cc  00000000  00000000  00004fd3  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000018  00000000  00000000  0000569f  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+       0:	0c 94 7b 00 	jmp	0xf6	; 0xf6 <__ctors_end>
+       4:	0c 94 85 00 	jmp	0x10a	; 0x10a <__bad_interrupt>
+       8:	0c 94 85 00 	jmp	0x10a	; 0x10a <__bad_interrupt>
+       c:	0c 94 85 00 	jmp	0x10a	; 0x10a <__bad_interrupt>
+      10:	0c 94 85 00 	jmp	0x10a	; 0x10a <__bad_interrupt>
+      14:	0c 94 85 00 	jmp	0x10a	; 0x10a <__bad_interrupt>
+      18:	0c 94 85 00 	jmp	0x10a	; 0x10a <__bad_interrupt>
+      1c:	0c 94 85 00 	jmp	0x10a	; 0x10a <__bad_interrupt>
+      20:	0c 94 85 00 	jmp	0x10a	; 0x10a <__bad_interrupt>
+      24:	0c 94 85 00 	jmp	0x10a	; 0x10a <__bad_interrupt>
+      28:	0c 94 85 00 	jmp	0x10a	; 0x10a <__bad_interrupt>
+      2c:	0c 94 85 00 	jmp	0x10a	; 0x10a <__bad_interrupt>
+      30:	0c 94 85 00 	jmp	0x10a	; 0x10a <__bad_interrupt>
+      34:	0c 94 85 00 	jmp	0x10a	; 0x10a <__bad_interrupt>
+      38:	0c 94 85 00 	jmp	0x10a	; 0x10a <__bad_interrupt>
+      3c:	0c 94 85 00 	jmp	0x10a	; 0x10a <__bad_interrupt>
+      40:	0c 94 85 00 	jmp	0x10a	; 0x10a <__bad_interrupt>
+      44:	0c 94 85 00 	jmp	0x10a	; 0x10a <__bad_interrupt>
+      48:	0c 94 85 00 	jmp	0x10a	; 0x10a <__bad_interrupt>
+      4c:	0c 94 85 00 	jmp	0x10a	; 0x10a <__bad_interrupt>
+      50:	0c 94 85 00 	jmp	0x10a	; 0x10a <__bad_interrupt>
+      54:	da 04       	cpc	r13, r10
+      56:	f2 04       	cpc	r15, r2
+      58:	0a 05       	cpc	r16, r10
+      5a:	22 05       	cpc	r18, r2
+      5c:	3a 05       	cpc	r19, r10
+      5e:	52 05       	cpc	r21, r2
+      60:	6a 05       	cpc	r22, r10
+      62:	82 05       	cpc	r24, r2
+      64:	9a 05       	cpc	r25, r10
+      66:	3a 08       	sbc	r3, r10
+      68:	52 08       	sbc	r5, r2
+      6a:	6a 08       	sbc	r6, r10
+      6c:	82 08       	sbc	r8, r2
+      6e:	9a 08       	sbc	r9, r10
+      70:	b2 08       	sbc	r11, r2
+      72:	ca 08       	sbc	r12, r10
+      74:	e2 08       	sbc	r14, r2
+      76:	fa 08       	sbc	r15, r10
+      78:	02 04       	cpc	r0, r2
+      7a:	1a 04       	cpc	r1, r10
+      7c:	32 04       	cpc	r3, r2
+      7e:	4a 04       	cpc	r4, r10
+      80:	62 04       	cpc	r6, r2
+      82:	7a 04       	cpc	r7, r10
+      84:	92 04       	cpc	r9, r2
+      86:	aa 04       	cpc	r10, r10
+      88:	c2 04       	cpc	r12, r2
+      8a:	62 07       	cpc	r22, r18
+      8c:	7a 07       	cpc	r23, r26
+      8e:	92 07       	cpc	r25, r18
+      90:	aa 07       	cpc	r26, r26
+      92:	c2 07       	cpc	r28, r18
+      94:	da 07       	cpc	r29, r26
+      96:	f2 07       	cpc	r31, r18
+      98:	0a 08       	sbc	r0, r10
+      9a:	22 08       	sbc	r2, r2
+      9c:	2a 03       	fmul	r18, r18
+      9e:	42 03       	mulsu	r20, r18
+      a0:	5a 03       	fmul	r21, r18
+      a2:	72 03       	mulsu	r23, r18
+      a4:	8a 03       	fmulsu	r16, r18
+      a6:	a2 03       	fmuls	r18, r18
+      a8:	ba 03       	fmulsu	r19, r18
+      aa:	d2 03       	fmuls	r21, r18
+      ac:	ea 03       	fmulsu	r22, r18
+      ae:	8a 06       	cpc	r8, r26
+      b0:	a2 06       	cpc	r10, r18
+      b2:	ba 06       	cpc	r11, r26
+      b4:	d2 06       	cpc	r13, r18
+      b6:	ea 06       	cpc	r14, r26
+      b8:	02 07       	cpc	r16, r18
+      ba:	1a 07       	cpc	r17, r26
+      bc:	32 07       	cpc	r19, r18
+      be:	4a 07       	cpc	r20, r26
+      c0:	52 02       	muls	r21, r18
+      c2:	6a 02       	muls	r22, r26
+      c4:	82 02       	muls	r24, r18
+      c6:	9a 02       	muls	r25, r26
+      c8:	b2 02       	muls	r27, r18
+      ca:	ca 02       	muls	r28, r26
+      cc:	e2 02       	muls	r30, r18
+      ce:	fa 02       	muls	r31, r26
+      d0:	12 03       	mulsu	r17, r18
+      d2:	b2 05       	cpc	r27, r2
+      d4:	ca 05       	cpc	r28, r10
+      d6:	e2 05       	cpc	r30, r2
+      d8:	fa 05       	cpc	r31, r10
+      da:	12 06       	cpc	r1, r18
+      dc:	2a 06       	cpc	r2, r26
+      de:	42 06       	cpc	r4, r18
+      e0:	5a 06       	cpc	r5, r26
+      e2:	72 06       	cpc	r7, r18
+      e4:	7a 01       	movw	r14, r20
+      e6:	92 01       	movw	r18, r4
+      e8:	aa 01       	movw	r20, r20
+      ea:	c2 01       	movw	r24, r4
+      ec:	da 01       	movw	r26, r20
+      ee:	f2 01       	movw	r30, r4
+      f0:	0a 02       	muls	r16, r26
+      f2:	22 02       	muls	r18, r18
+      f4:	3a 02       	muls	r19, r26
+
+000000f6 <__ctors_end>:
+      f6:	11 24       	eor	r1, r1
+      f8:	1f be       	out	0x3f, r1	; 63
+      fa:	cf e5       	ldi	r28, 0x5F	; 95
+      fc:	d8 e0       	ldi	r29, 0x08	; 8
+      fe:	de bf       	out	0x3e, r29	; 62
+     100:	cd bf       	out	0x3d, r28	; 61
+     102:	0e 94 3d 01 	call	0x27a	; 0x27a <main>
+     106:	0c 94 7e 09 	jmp	0x12fc	; 0x12fc <_exit>
+
+0000010a <__bad_interrupt>:
+     10a:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+0000010e <addspicy>:
+	
+	
+}
+
+int addspicy(int spicyspoon1, int spicyspoon2, int spicyspoon3, int spicyspoon4, int spicyspoon5, int spicyspoon6, int spicyspoon7, int spicyspoon8)
+{
+     10e:	af 92       	push	r10
+     110:	bf 92       	push	r11
+     112:	cf 92       	push	r12
+     114:	df 92       	push	r13
+     116:	ef 92       	push	r14
+     118:	ff 92       	push	r15
+     11a:	0f 93       	push	r16
+     11c:	1f 93       	push	r17
+     11e:	cf 93       	push	r28
+     120:	df 93       	push	r29
+    for (int i = 0; i < spicyspoon1; i++)
+     122:	18 16       	cp	r1, r24
+     124:	19 06       	cpc	r1, r25
+     126:	8c f4       	brge	.+34     	; 0x14a <addspicy+0x3c>
+     128:	e0 e0       	ldi	r30, 0x00	; 0
+     12a:	f0 e0       	ldi	r31, 0x00	; 0
+    {
+        PORTC = 0x01;
+     12c:	a1 e0       	ldi	r26, 0x01	; 1
+     12e:	a5 bb       	out	0x15, r26	; 21
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+     130:	bf ef       	ldi	r27, 0xFF	; 255
+     132:	c1 ee       	ldi	r28, 0xE1	; 225
+     134:	d4 e0       	ldi	r29, 0x04	; 4
+     136:	b1 50       	subi	r27, 0x01	; 1
+     138:	c0 40       	sbci	r28, 0x00	; 0
+     13a:	d0 40       	sbci	r29, 0x00	; 0
+     13c:	e1 f7       	brne	.-8      	; 0x136 <addspicy+0x28>
+     13e:	00 c0       	rjmp	.+0      	; 0x140 <addspicy+0x32>
+     140:	00 00       	nop
+	
+}
+
+int addspicy(int spicyspoon1, int spicyspoon2, int spicyspoon3, int spicyspoon4, int spicyspoon5, int spicyspoon6, int spicyspoon7, int spicyspoon8)
+{
+    for (int i = 0; i < spicyspoon1; i++)
+     142:	31 96       	adiw	r30, 0x01	; 1
+     144:	8e 17       	cp	r24, r30
+     146:	9f 07       	cpc	r25, r31
+     148:	91 f7       	brne	.-28     	; 0x12e <addspicy+0x20>
+    {
+        PORTC = 0x01;
+        _delay_ms(100);
+    }
+    for (int i = 0; i < spicyspoon2; i++)
+     14a:	16 16       	cp	r1, r22
+     14c:	17 06       	cpc	r1, r23
+     14e:	8c f4       	brge	.+34     	; 0x172 <addspicy+0x64>
+     150:	80 e0       	ldi	r24, 0x00	; 0
+     152:	90 e0       	ldi	r25, 0x00	; 0
+    {
+        PORTC = 0x02;
+     154:	e2 e0       	ldi	r30, 0x02	; 2
+     156:	e5 bb       	out	0x15, r30	; 21
+     158:	ff ef       	ldi	r31, 0xFF	; 255
+     15a:	a1 ee       	ldi	r26, 0xE1	; 225
+     15c:	b4 e0       	ldi	r27, 0x04	; 4
+     15e:	f1 50       	subi	r31, 0x01	; 1
+     160:	a0 40       	sbci	r26, 0x00	; 0
+     162:	b0 40       	sbci	r27, 0x00	; 0
+     164:	e1 f7       	brne	.-8      	; 0x15e <addspicy+0x50>
+     166:	00 c0       	rjmp	.+0      	; 0x168 <addspicy+0x5a>
+     168:	00 00       	nop
+    for (int i = 0; i < spicyspoon1; i++)
+    {
+        PORTC = 0x01;
+        _delay_ms(100);
+    }
+    for (int i = 0; i < spicyspoon2; i++)
+     16a:	01 96       	adiw	r24, 0x01	; 1
+     16c:	68 17       	cp	r22, r24
+     16e:	79 07       	cpc	r23, r25
+     170:	91 f7       	brne	.-28     	; 0x156 <addspicy+0x48>
+    {
+        PORTC = 0x02;
+        _delay_ms(100);
+    }
+    for (int i = 0; i < spicyspoon3; i++)
+     172:	14 16       	cp	r1, r20
+     174:	15 06       	cpc	r1, r21
+     176:	8c f4       	brge	.+34     	; 0x19a <addspicy+0x8c>
+     178:	80 e0       	ldi	r24, 0x00	; 0
+     17a:	90 e0       	ldi	r25, 0x00	; 0
+    {
+        PORTC = 0x04;
+     17c:	64 e0       	ldi	r22, 0x04	; 4
+     17e:	65 bb       	out	0x15, r22	; 21
+     180:	cf ef       	ldi	r28, 0xFF	; 255
+     182:	d1 ee       	ldi	r29, 0xE1	; 225
+     184:	e4 e0       	ldi	r30, 0x04	; 4
+     186:	c1 50       	subi	r28, 0x01	; 1
+     188:	d0 40       	sbci	r29, 0x00	; 0
+     18a:	e0 40       	sbci	r30, 0x00	; 0
+     18c:	e1 f7       	brne	.-8      	; 0x186 <addspicy+0x78>
+     18e:	00 c0       	rjmp	.+0      	; 0x190 <addspicy+0x82>
+     190:	00 00       	nop
+    for (int i = 0; i < spicyspoon2; i++)
+    {
+        PORTC = 0x02;
+        _delay_ms(100);
+    }
+    for (int i = 0; i < spicyspoon3; i++)
+     192:	01 96       	adiw	r24, 0x01	; 1
+     194:	48 17       	cp	r20, r24
+     196:	59 07       	cpc	r21, r25
+     198:	91 f7       	brne	.-28     	; 0x17e <addspicy+0x70>
+    {
+        PORTC = 0x04;
+        _delay_ms(100);
+    }
+    for (int i = 0; i < spicyspoon4; i++)
+     19a:	12 16       	cp	r1, r18
+     19c:	13 06       	cpc	r1, r19
+     19e:	8c f4       	brge	.+34     	; 0x1c2 <addspicy+0xb4>
+     1a0:	80 e0       	ldi	r24, 0x00	; 0
+     1a2:	90 e0       	ldi	r25, 0x00	; 0
+    {
+        PORTC = 0x08;
+     1a4:	48 e0       	ldi	r20, 0x08	; 8
+     1a6:	45 bb       	out	0x15, r20	; 21
+     1a8:	ff ef       	ldi	r31, 0xFF	; 255
+     1aa:	51 ee       	ldi	r21, 0xE1	; 225
+     1ac:	64 e0       	ldi	r22, 0x04	; 4
+     1ae:	f1 50       	subi	r31, 0x01	; 1
+     1b0:	50 40       	sbci	r21, 0x00	; 0
+     1b2:	60 40       	sbci	r22, 0x00	; 0
+     1b4:	e1 f7       	brne	.-8      	; 0x1ae <addspicy+0xa0>
+     1b6:	00 c0       	rjmp	.+0      	; 0x1b8 <addspicy+0xaa>
+     1b8:	00 00       	nop
+    for (int i = 0; i < spicyspoon3; i++)
+    {
+        PORTC = 0x04;
+        _delay_ms(100);
+    }
+    for (int i = 0; i < spicyspoon4; i++)
+     1ba:	01 96       	adiw	r24, 0x01	; 1
+     1bc:	28 17       	cp	r18, r24
+     1be:	39 07       	cpc	r19, r25
+     1c0:	91 f7       	brne	.-28     	; 0x1a6 <addspicy+0x98>
+    {
+        PORTC = 0x08;
+        _delay_ms(100);
+    }
+    for (int i = 0; i < spicyspoon5; i++)
+     1c2:	10 16       	cp	r1, r16
+     1c4:	11 06       	cpc	r1, r17
+     1c6:	8c f4       	brge	.+34     	; 0x1ea <addspicy+0xdc>
+     1c8:	80 e0       	ldi	r24, 0x00	; 0
+     1ca:	90 e0       	ldi	r25, 0x00	; 0
+    {
+        PORTC = 0x10;
+     1cc:	20 e1       	ldi	r18, 0x10	; 16
+     1ce:	25 bb       	out	0x15, r18	; 21
+     1d0:	7f ef       	ldi	r23, 0xFF	; 255
+     1d2:	a1 ee       	ldi	r26, 0xE1	; 225
+     1d4:	b4 e0       	ldi	r27, 0x04	; 4
+     1d6:	71 50       	subi	r23, 0x01	; 1
+     1d8:	a0 40       	sbci	r26, 0x00	; 0
+     1da:	b0 40       	sbci	r27, 0x00	; 0
+     1dc:	e1 f7       	brne	.-8      	; 0x1d6 <addspicy+0xc8>
+     1de:	00 c0       	rjmp	.+0      	; 0x1e0 <addspicy+0xd2>
+     1e0:	00 00       	nop
+    for (int i = 0; i < spicyspoon4; i++)
+    {
+        PORTC = 0x08;
+        _delay_ms(100);
+    }
+    for (int i = 0; i < spicyspoon5; i++)
+     1e2:	01 96       	adiw	r24, 0x01	; 1
+     1e4:	08 17       	cp	r16, r24
+     1e6:	19 07       	cpc	r17, r25
+     1e8:	91 f7       	brne	.-28     	; 0x1ce <addspicy+0xc0>
+    {
+        PORTC = 0x10;
+        _delay_ms(100);
+    }
+    for (int i = 0; i < spicyspoon6; i++)
+     1ea:	1e 14       	cp	r1, r14
+     1ec:	1f 04       	cpc	r1, r15
+     1ee:	8c f4       	brge	.+34     	; 0x212 <addspicy+0x104>
+     1f0:	80 e0       	ldi	r24, 0x00	; 0
+     1f2:	90 e0       	ldi	r25, 0x00	; 0
+    {
+        PORTC = 0x20;
+     1f4:	20 e2       	ldi	r18, 0x20	; 32
+     1f6:	25 bb       	out	0x15, r18	; 21
+     1f8:	cf ef       	ldi	r28, 0xFF	; 255
+     1fa:	d1 ee       	ldi	r29, 0xE1	; 225
+     1fc:	e4 e0       	ldi	r30, 0x04	; 4
+     1fe:	c1 50       	subi	r28, 0x01	; 1
+     200:	d0 40       	sbci	r29, 0x00	; 0
+     202:	e0 40       	sbci	r30, 0x00	; 0
+     204:	e1 f7       	brne	.-8      	; 0x1fe <addspicy+0xf0>
+     206:	00 c0       	rjmp	.+0      	; 0x208 <addspicy+0xfa>
+     208:	00 00       	nop
+    for (int i = 0; i < spicyspoon5; i++)
+    {
+        PORTC = 0x10;
+        _delay_ms(100);
+    }
+    for (int i = 0; i < spicyspoon6; i++)
+     20a:	01 96       	adiw	r24, 0x01	; 1
+     20c:	e8 16       	cp	r14, r24
+     20e:	f9 06       	cpc	r15, r25
+     210:	91 f7       	brne	.-28     	; 0x1f6 <addspicy+0xe8>
+    {
+        PORTC = 0x20;
+        _delay_ms(100);
+    }
+    for (int i = 0; i < spicyspoon7; i++)
+     212:	1c 14       	cp	r1, r12
+     214:	1d 04       	cpc	r1, r13
+     216:	8c f4       	brge	.+34     	; 0x23a <addspicy+0x12c>
+     218:	80 e0       	ldi	r24, 0x00	; 0
+     21a:	90 e0       	ldi	r25, 0x00	; 0
+    {
+        PORTC = 0x40;
+     21c:	20 e4       	ldi	r18, 0x40	; 64
+     21e:	25 bb       	out	0x15, r18	; 21
+     220:	ff ef       	ldi	r31, 0xFF	; 255
+     222:	31 ee       	ldi	r19, 0xE1	; 225
+     224:	44 e0       	ldi	r20, 0x04	; 4
+     226:	f1 50       	subi	r31, 0x01	; 1
+     228:	30 40       	sbci	r19, 0x00	; 0
+     22a:	40 40       	sbci	r20, 0x00	; 0
+     22c:	e1 f7       	brne	.-8      	; 0x226 <addspicy+0x118>
+     22e:	00 c0       	rjmp	.+0      	; 0x230 <addspicy+0x122>
+     230:	00 00       	nop
+    for (int i = 0; i < spicyspoon6; i++)
+    {
+        PORTC = 0x20;
+        _delay_ms(100);
+    }
+    for (int i = 0; i < spicyspoon7; i++)
+     232:	01 96       	adiw	r24, 0x01	; 1
+     234:	c8 16       	cp	r12, r24
+     236:	d9 06       	cpc	r13, r25
+     238:	91 f7       	brne	.-28     	; 0x21e <addspicy+0x110>
+    {
+        PORTC = 0x40;
+        _delay_ms(100);
+    }
+    for (int i = 0; i < spicyspoon8; i++)
+     23a:	1a 14       	cp	r1, r10
+     23c:	1b 04       	cpc	r1, r11
+     23e:	8c f4       	brge	.+34     	; 0x262 <addspicy+0x154>
+     240:	80 e0       	ldi	r24, 0x00	; 0
+     242:	90 e0       	ldi	r25, 0x00	; 0
+    {
+        PORTC = 0x80;
+     244:	20 e8       	ldi	r18, 0x80	; 128
+     246:	25 bb       	out	0x15, r18	; 21
+     248:	5f ef       	ldi	r21, 0xFF	; 255
+     24a:	61 ee       	ldi	r22, 0xE1	; 225
+     24c:	74 e0       	ldi	r23, 0x04	; 4
+     24e:	51 50       	subi	r21, 0x01	; 1
+     250:	60 40       	sbci	r22, 0x00	; 0
+     252:	70 40       	sbci	r23, 0x00	; 0
+     254:	e1 f7       	brne	.-8      	; 0x24e <addspicy+0x140>
+     256:	00 c0       	rjmp	.+0      	; 0x258 <addspicy+0x14a>
+     258:	00 00       	nop
+    for (int i = 0; i < spicyspoon7; i++)
+    {
+        PORTC = 0x40;
+        _delay_ms(100);
+    }
+    for (int i = 0; i < spicyspoon8; i++)
+     25a:	01 96       	adiw	r24, 0x01	; 1
+     25c:	a8 16       	cp	r10, r24
+     25e:	b9 06       	cpc	r11, r25
+     260:	91 f7       	brne	.-28     	; 0x246 <addspicy+0x138>
+    {
+        PORTC = 0x80;
+        _delay_ms(100);
+    }
+	PORTC = 0x00;
+     262:	15 ba       	out	0x15, r1	; 21
+}
+     264:	df 91       	pop	r29
+     266:	cf 91       	pop	r28
+     268:	1f 91       	pop	r17
+     26a:	0f 91       	pop	r16
+     26c:	ff 90       	pop	r15
+     26e:	ef 90       	pop	r14
+     270:	df 90       	pop	r13
+     272:	cf 90       	pop	r12
+     274:	bf 90       	pop	r11
+     276:	af 90       	pop	r10
+     278:	08 95       	ret
+
+0000027a <main>:
+int addspicy(int spicyspoon1, int spicyspoon2, int spicyspoon3, int spicyspoon4, int spicyspoon5, int spicyspoon6, int spicyspoon7, int spicyspoon8);
+
+
+
+int main(void) //main starts
+{
+     27a:	af 92       	push	r10
+     27c:	bf 92       	push	r11
+     27e:	cf 92       	push	r12
+     280:	df 92       	push	r13
+     282:	ef 92       	push	r14
+     284:	ff 92       	push	r15
+     286:	0f 93       	push	r16
+     288:	1f 93       	push	r17
+    DDRC = 0xFF;
+     28a:	8f ef       	ldi	r24, 0xFF	; 255
+     28c:	84 bb       	out	0x14, r24	; 20
+    DDRB = 0x00;
+     28e:	17 ba       	out	0x17, r1	; 23
+    int curryNum = 0, personNum = 0;
+
+    //checking number of person
+    while (personNum == 0)
+    {
+        if (PINB & (1 << 0))
+     290:	b0 9b       	sbis	0x16, 0	; 22
+     292:	0e c0       	rjmp	.+28     	; 0x2b0 <main+0x36>
+        {
+            if (PINB & (1 << 1))
+     294:	b1 9b       	sbis	0x16, 1	; 22
+     296:	05 c0       	rjmp	.+10     	; 0x2a2 <main+0x28>
+            {
+                if (PINB & (1 << 2))
+     298:	b2 99       	sbic	0x16, 2	; 22
+     29a:	c4 c7       	rjmp	.+3976   	; 0x1224 <__stack+0x9c5>
+                {
+                    personNum = 7;
+                }
+                else
+                {
+                    personNum = 3;
+     29c:	e3 e0       	ldi	r30, 0x03	; 3
+     29e:	f0 e0       	ldi	r31, 0x00	; 0
+     2a0:	13 c0       	rjmp	.+38     	; 0x2c8 <main+0x4e>
+                }
+            }
+            else if (PINB & (1 << 2))
+     2a2:	b2 99       	sbic	0x16, 2	; 22
+     2a4:	c2 c7       	rjmp	.+3972   	; 0x122a <__stack+0x9cb>
+
+            {
+                personNum = 5;
+            }
+            else if (PINB & (1 << 3))
+     2a6:	b3 99       	sbic	0x16, 3	; 22
+     2a8:	c3 c7       	rjmp	.+3974   	; 0x1230 <__stack+0x9d1>
+            {
+                personNum = 9;
+            }
+            else
+            {
+                personNum = 1;
+     2aa:	e1 e0       	ldi	r30, 0x01	; 1
+     2ac:	f0 e0       	ldi	r31, 0x00	; 0
+     2ae:	0c c0       	rjmp	.+24     	; 0x2c8 <main+0x4e>
+            }
+        }
+        else if (PINB & (1 << 1))
+     2b0:	b1 9b       	sbis	0x16, 1	; 22
+     2b2:	05 c0       	rjmp	.+10     	; 0x2be <main+0x44>
+        {
+            if (PINB & (1 << 2))
+     2b4:	b2 99       	sbic	0x16, 2	; 22
+     2b6:	bf c7       	rjmp	.+3966   	; 0x1236 <__stack+0x9d7>
+            {
+                personNum = 6;
+            }
+            else
+            {
+                personNum = 2;
+     2b8:	e2 e0       	ldi	r30, 0x02	; 2
+     2ba:	f0 e0       	ldi	r31, 0x00	; 0
+     2bc:	05 c0       	rjmp	.+10     	; 0x2c8 <main+0x4e>
+            }
+        }
+        else if (PINB & (1 << 3))
+     2be:	b3 99       	sbic	0x16, 3	; 22
+     2c0:	bd c7       	rjmp	.+3962   	; 0x123c <__stack+0x9dd>
+        {
+            personNum = 8;
+        }
+        else if (PINB & (1 << 2))
+     2c2:	b2 99       	sbic	0x16, 2	; 22
+     2c4:	be c7       	rjmp	.+3964   	; 0x1242 <__stack+0x9e3>
+     2c6:	e4 cf       	rjmp	.-56     	; 0x290 <main+0x16>
+    }
+
+    //checking curry number
+    while (curryNum == 0)
+    {
+        if (PINB & (1 << 4))
+     2c8:	b4 9b       	sbis	0x16, 4	; 22
+     2ca:	0a c0       	rjmp	.+20     	; 0x2e0 <main+0x66>
+        {
+            if (PINB & (1 << 5))
+     2cc:	b5 9b       	sbis	0x16, 5	; 22
+     2ce:	03 c0       	rjmp	.+6      	; 0x2d6 <main+0x5c>
+            {
+                if (PINB & (1 << 6))
+     2d0:	b6 99       	sbic	0x16, 6	; 22
+     2d2:	e3 c7       	rjmp	.+4038   	; 0x129a <__stack+0xa3b>
+     2d4:	da c7       	rjmp	.+4020   	; 0x128a <__stack+0xa2b>
+                else
+                {
+                    curryNum = 3;
+                }
+            }
+            else if (PINB & (1 << 6))
+     2d6:	b6 99       	sbic	0x16, 6	; 22
+     2d8:	b7 c7       	rjmp	.+3950   	; 0x1248 <__stack+0x9e9>
+            {
+                curryNum = 5;
+            }
+            else if (PINB & (1 << 7))
+     2da:	b7 9b       	sbis	0x16, 7	; 22
+     2dc:	f6 c7       	rjmp	.+4076   	; 0x12ca <__stack+0xa6b>
+     2de:	bd c7       	rjmp	.+3962   	; 0x125a <__stack+0x9fb>
+            else
+            {
+                curryNum = 1;
+            }
+        }
+        else if (PINB & (1 << 5))
+     2e0:	b5 9b       	sbis	0x16, 5	; 22
+     2e2:	03 c0       	rjmp	.+6      	; 0x2ea <main+0x70>
+        {
+            if (PINB & (1 << 6))
+     2e4:	b6 99       	sbic	0x16, 6	; 22
+     2e6:	e9 c7       	rjmp	.+4050   	; 0x12ba <__stack+0xa5b>
+     2e8:	e0 c7       	rjmp	.+4032   	; 0x12aa <__stack+0xa4b>
+            else
+            {
+                curryNum = 2;
+            }
+        }
+        else if (PINB & (1 << 7))
+     2ea:	b7 99       	sbic	0x16, 7	; 22
+     2ec:	c6 c7       	rjmp	.+3980   	; 0x127a <__stack+0xa1b>
+        {
+            curryNum = 8;
+        }
+        else if (PINB & (1 << 6))
+     2ee:	b6 99       	sbic	0x16, 6	; 22
+     2f0:	bc c7       	rjmp	.+3960   	; 0x126a <__stack+0xa0b>
+     2f2:	ea cf       	rjmp	.-44     	; 0x2c8 <main+0x4e>
+    {
+    case 1:
+        switch (personNum)
+        {
+        case 1:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     2f4:	68 94       	set
+     2f6:	aa 24       	eor	r10, r10
+     2f8:	a1 f8       	bld	r10, 1
+     2fa:	b1 2c       	mov	r11, r1
+     2fc:	cc 24       	eor	r12, r12
+     2fe:	c3 94       	inc	r12
+     300:	d1 2c       	mov	r13, r1
+     302:	68 94       	set
+     304:	ee 24       	eor	r14, r14
+     306:	e1 f8       	bld	r14, 1
+     308:	f1 2c       	mov	r15, r1
+     30a:	04 e0       	ldi	r16, 0x04	; 4
+     30c:	10 e0       	ldi	r17, 0x00	; 0
+     30e:	23 e0       	ldi	r18, 0x03	; 3
+     310:	30 e0       	ldi	r19, 0x00	; 0
+     312:	42 e0       	ldi	r20, 0x02	; 2
+     314:	50 e0       	ldi	r21, 0x00	; 0
+     316:	61 e0       	ldi	r22, 0x01	; 1
+     318:	70 e0       	ldi	r23, 0x00	; 0
+     31a:	82 e0       	ldi	r24, 0x02	; 2
+     31c:	90 e0       	ldi	r25, 0x00	; 0
+     31e:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            ;
+            break;
+     322:	db c7       	rjmp	.+4022   	; 0x12da <__stack+0xa7b>
+        case 2:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     324:	68 94       	set
+     326:	aa 24       	eor	r10, r10
+     328:	a1 f8       	bld	r10, 1
+     32a:	b1 2c       	mov	r11, r1
+     32c:	cc 24       	eor	r12, r12
+     32e:	c3 94       	inc	r12
+     330:	d1 2c       	mov	r13, r1
+     332:	68 94       	set
+     334:	ee 24       	eor	r14, r14
+     336:	e1 f8       	bld	r14, 1
+     338:	f1 2c       	mov	r15, r1
+     33a:	04 e0       	ldi	r16, 0x04	; 4
+     33c:	10 e0       	ldi	r17, 0x00	; 0
+     33e:	23 e0       	ldi	r18, 0x03	; 3
+     340:	30 e0       	ldi	r19, 0x00	; 0
+     342:	42 e0       	ldi	r20, 0x02	; 2
+     344:	50 e0       	ldi	r21, 0x00	; 0
+     346:	61 e0       	ldi	r22, 0x01	; 1
+     348:	70 e0       	ldi	r23, 0x00	; 0
+     34a:	82 e0       	ldi	r24, 0x02	; 2
+     34c:	90 e0       	ldi	r25, 0x00	; 0
+     34e:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            ;
+            break;
+     352:	c3 c7       	rjmp	.+3974   	; 0x12da <__stack+0xa7b>
+        case 3:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     354:	68 94       	set
+     356:	aa 24       	eor	r10, r10
+     358:	a1 f8       	bld	r10, 1
+     35a:	b1 2c       	mov	r11, r1
+     35c:	cc 24       	eor	r12, r12
+     35e:	c3 94       	inc	r12
+     360:	d1 2c       	mov	r13, r1
+     362:	68 94       	set
+     364:	ee 24       	eor	r14, r14
+     366:	e1 f8       	bld	r14, 1
+     368:	f1 2c       	mov	r15, r1
+     36a:	04 e0       	ldi	r16, 0x04	; 4
+     36c:	10 e0       	ldi	r17, 0x00	; 0
+     36e:	23 e0       	ldi	r18, 0x03	; 3
+     370:	30 e0       	ldi	r19, 0x00	; 0
+     372:	42 e0       	ldi	r20, 0x02	; 2
+     374:	50 e0       	ldi	r21, 0x00	; 0
+     376:	61 e0       	ldi	r22, 0x01	; 1
+     378:	70 e0       	ldi	r23, 0x00	; 0
+     37a:	82 e0       	ldi	r24, 0x02	; 2
+     37c:	90 e0       	ldi	r25, 0x00	; 0
+     37e:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            ;
+            break;
+     382:	ab c7       	rjmp	.+3926   	; 0x12da <__stack+0xa7b>
+        case 4:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     384:	68 94       	set
+     386:	aa 24       	eor	r10, r10
+     388:	a1 f8       	bld	r10, 1
+     38a:	b1 2c       	mov	r11, r1
+     38c:	cc 24       	eor	r12, r12
+     38e:	c3 94       	inc	r12
+     390:	d1 2c       	mov	r13, r1
+     392:	68 94       	set
+     394:	ee 24       	eor	r14, r14
+     396:	e1 f8       	bld	r14, 1
+     398:	f1 2c       	mov	r15, r1
+     39a:	04 e0       	ldi	r16, 0x04	; 4
+     39c:	10 e0       	ldi	r17, 0x00	; 0
+     39e:	23 e0       	ldi	r18, 0x03	; 3
+     3a0:	30 e0       	ldi	r19, 0x00	; 0
+     3a2:	42 e0       	ldi	r20, 0x02	; 2
+     3a4:	50 e0       	ldi	r21, 0x00	; 0
+     3a6:	61 e0       	ldi	r22, 0x01	; 1
+     3a8:	70 e0       	ldi	r23, 0x00	; 0
+     3aa:	82 e0       	ldi	r24, 0x02	; 2
+     3ac:	90 e0       	ldi	r25, 0x00	; 0
+     3ae:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            ;
+            break;
+     3b2:	93 c7       	rjmp	.+3878   	; 0x12da <__stack+0xa7b>
+        case 5:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     3b4:	68 94       	set
+     3b6:	aa 24       	eor	r10, r10
+     3b8:	a1 f8       	bld	r10, 1
+     3ba:	b1 2c       	mov	r11, r1
+     3bc:	cc 24       	eor	r12, r12
+     3be:	c3 94       	inc	r12
+     3c0:	d1 2c       	mov	r13, r1
+     3c2:	68 94       	set
+     3c4:	ee 24       	eor	r14, r14
+     3c6:	e1 f8       	bld	r14, 1
+     3c8:	f1 2c       	mov	r15, r1
+     3ca:	04 e0       	ldi	r16, 0x04	; 4
+     3cc:	10 e0       	ldi	r17, 0x00	; 0
+     3ce:	23 e0       	ldi	r18, 0x03	; 3
+     3d0:	30 e0       	ldi	r19, 0x00	; 0
+     3d2:	42 e0       	ldi	r20, 0x02	; 2
+     3d4:	50 e0       	ldi	r21, 0x00	; 0
+     3d6:	61 e0       	ldi	r22, 0x01	; 1
+     3d8:	70 e0       	ldi	r23, 0x00	; 0
+     3da:	82 e0       	ldi	r24, 0x02	; 2
+     3dc:	90 e0       	ldi	r25, 0x00	; 0
+     3de:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            ;
+            break;
+     3e2:	7b c7       	rjmp	.+3830   	; 0x12da <__stack+0xa7b>
+        case 6:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     3e4:	68 94       	set
+     3e6:	aa 24       	eor	r10, r10
+     3e8:	a1 f8       	bld	r10, 1
+     3ea:	b1 2c       	mov	r11, r1
+     3ec:	cc 24       	eor	r12, r12
+     3ee:	c3 94       	inc	r12
+     3f0:	d1 2c       	mov	r13, r1
+     3f2:	68 94       	set
+     3f4:	ee 24       	eor	r14, r14
+     3f6:	e1 f8       	bld	r14, 1
+     3f8:	f1 2c       	mov	r15, r1
+     3fa:	04 e0       	ldi	r16, 0x04	; 4
+     3fc:	10 e0       	ldi	r17, 0x00	; 0
+     3fe:	23 e0       	ldi	r18, 0x03	; 3
+     400:	30 e0       	ldi	r19, 0x00	; 0
+     402:	42 e0       	ldi	r20, 0x02	; 2
+     404:	50 e0       	ldi	r21, 0x00	; 0
+     406:	61 e0       	ldi	r22, 0x01	; 1
+     408:	70 e0       	ldi	r23, 0x00	; 0
+     40a:	82 e0       	ldi	r24, 0x02	; 2
+     40c:	90 e0       	ldi	r25, 0x00	; 0
+     40e:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            ;
+            break;
+     412:	63 c7       	rjmp	.+3782   	; 0x12da <__stack+0xa7b>
+        case 7:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     414:	68 94       	set
+     416:	aa 24       	eor	r10, r10
+     418:	a1 f8       	bld	r10, 1
+     41a:	b1 2c       	mov	r11, r1
+     41c:	cc 24       	eor	r12, r12
+     41e:	c3 94       	inc	r12
+     420:	d1 2c       	mov	r13, r1
+     422:	68 94       	set
+     424:	ee 24       	eor	r14, r14
+     426:	e1 f8       	bld	r14, 1
+     428:	f1 2c       	mov	r15, r1
+     42a:	04 e0       	ldi	r16, 0x04	; 4
+     42c:	10 e0       	ldi	r17, 0x00	; 0
+     42e:	23 e0       	ldi	r18, 0x03	; 3
+     430:	30 e0       	ldi	r19, 0x00	; 0
+     432:	42 e0       	ldi	r20, 0x02	; 2
+     434:	50 e0       	ldi	r21, 0x00	; 0
+     436:	61 e0       	ldi	r22, 0x01	; 1
+     438:	70 e0       	ldi	r23, 0x00	; 0
+     43a:	82 e0       	ldi	r24, 0x02	; 2
+     43c:	90 e0       	ldi	r25, 0x00	; 0
+     43e:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            ;
+            break;
+     442:	4b c7       	rjmp	.+3734   	; 0x12da <__stack+0xa7b>
+        case 8:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     444:	68 94       	set
+     446:	aa 24       	eor	r10, r10
+     448:	a1 f8       	bld	r10, 1
+     44a:	b1 2c       	mov	r11, r1
+     44c:	cc 24       	eor	r12, r12
+     44e:	c3 94       	inc	r12
+     450:	d1 2c       	mov	r13, r1
+     452:	68 94       	set
+     454:	ee 24       	eor	r14, r14
+     456:	e1 f8       	bld	r14, 1
+     458:	f1 2c       	mov	r15, r1
+     45a:	04 e0       	ldi	r16, 0x04	; 4
+     45c:	10 e0       	ldi	r17, 0x00	; 0
+     45e:	23 e0       	ldi	r18, 0x03	; 3
+     460:	30 e0       	ldi	r19, 0x00	; 0
+     462:	42 e0       	ldi	r20, 0x02	; 2
+     464:	50 e0       	ldi	r21, 0x00	; 0
+     466:	61 e0       	ldi	r22, 0x01	; 1
+     468:	70 e0       	ldi	r23, 0x00	; 0
+     46a:	82 e0       	ldi	r24, 0x02	; 2
+     46c:	90 e0       	ldi	r25, 0x00	; 0
+     46e:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            ;
+            break;
+     472:	33 c7       	rjmp	.+3686   	; 0x12da <__stack+0xa7b>
+        case 9:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     474:	68 94       	set
+     476:	aa 24       	eor	r10, r10
+     478:	a1 f8       	bld	r10, 1
+     47a:	b1 2c       	mov	r11, r1
+     47c:	cc 24       	eor	r12, r12
+     47e:	c3 94       	inc	r12
+     480:	d1 2c       	mov	r13, r1
+     482:	68 94       	set
+     484:	ee 24       	eor	r14, r14
+     486:	e1 f8       	bld	r14, 1
+     488:	f1 2c       	mov	r15, r1
+     48a:	04 e0       	ldi	r16, 0x04	; 4
+     48c:	10 e0       	ldi	r17, 0x00	; 0
+     48e:	23 e0       	ldi	r18, 0x03	; 3
+     490:	30 e0       	ldi	r19, 0x00	; 0
+     492:	42 e0       	ldi	r20, 0x02	; 2
+     494:	50 e0       	ldi	r21, 0x00	; 0
+     496:	61 e0       	ldi	r22, 0x01	; 1
+     498:	70 e0       	ldi	r23, 0x00	; 0
+     49a:	82 e0       	ldi	r24, 0x02	; 2
+     49c:	90 e0       	ldi	r25, 0x00	; 0
+     49e:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     4a2:	1b c7       	rjmp	.+3638   	; 0x12da <__stack+0xa7b>
+        break;
+    case 2:
+        switch (personNum)
+        {
+        case 1:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     4a4:	68 94       	set
+     4a6:	aa 24       	eor	r10, r10
+     4a8:	a1 f8       	bld	r10, 1
+     4aa:	b1 2c       	mov	r11, r1
+     4ac:	cc 24       	eor	r12, r12
+     4ae:	c3 94       	inc	r12
+     4b0:	d1 2c       	mov	r13, r1
+     4b2:	68 94       	set
+     4b4:	ee 24       	eor	r14, r14
+     4b6:	e1 f8       	bld	r14, 1
+     4b8:	f1 2c       	mov	r15, r1
+     4ba:	04 e0       	ldi	r16, 0x04	; 4
+     4bc:	10 e0       	ldi	r17, 0x00	; 0
+     4be:	23 e0       	ldi	r18, 0x03	; 3
+     4c0:	30 e0       	ldi	r19, 0x00	; 0
+     4c2:	42 e0       	ldi	r20, 0x02	; 2
+     4c4:	50 e0       	ldi	r21, 0x00	; 0
+     4c6:	61 e0       	ldi	r22, 0x01	; 1
+     4c8:	70 e0       	ldi	r23, 0x00	; 0
+     4ca:	82 e0       	ldi	r24, 0x02	; 2
+     4cc:	90 e0       	ldi	r25, 0x00	; 0
+     4ce:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     4d2:	03 c7       	rjmp	.+3590   	; 0x12da <__stack+0xa7b>
+        case 2:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     4d4:	68 94       	set
+     4d6:	aa 24       	eor	r10, r10
+     4d8:	a1 f8       	bld	r10, 1
+     4da:	b1 2c       	mov	r11, r1
+     4dc:	cc 24       	eor	r12, r12
+     4de:	c3 94       	inc	r12
+     4e0:	d1 2c       	mov	r13, r1
+     4e2:	68 94       	set
+     4e4:	ee 24       	eor	r14, r14
+     4e6:	e1 f8       	bld	r14, 1
+     4e8:	f1 2c       	mov	r15, r1
+     4ea:	04 e0       	ldi	r16, 0x04	; 4
+     4ec:	10 e0       	ldi	r17, 0x00	; 0
+     4ee:	23 e0       	ldi	r18, 0x03	; 3
+     4f0:	30 e0       	ldi	r19, 0x00	; 0
+     4f2:	42 e0       	ldi	r20, 0x02	; 2
+     4f4:	50 e0       	ldi	r21, 0x00	; 0
+     4f6:	61 e0       	ldi	r22, 0x01	; 1
+     4f8:	70 e0       	ldi	r23, 0x00	; 0
+     4fa:	82 e0       	ldi	r24, 0x02	; 2
+     4fc:	90 e0       	ldi	r25, 0x00	; 0
+     4fe:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     502:	eb c6       	rjmp	.+3542   	; 0x12da <__stack+0xa7b>
+        case 3:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     504:	68 94       	set
+     506:	aa 24       	eor	r10, r10
+     508:	a1 f8       	bld	r10, 1
+     50a:	b1 2c       	mov	r11, r1
+     50c:	cc 24       	eor	r12, r12
+     50e:	c3 94       	inc	r12
+     510:	d1 2c       	mov	r13, r1
+     512:	68 94       	set
+     514:	ee 24       	eor	r14, r14
+     516:	e1 f8       	bld	r14, 1
+     518:	f1 2c       	mov	r15, r1
+     51a:	04 e0       	ldi	r16, 0x04	; 4
+     51c:	10 e0       	ldi	r17, 0x00	; 0
+     51e:	23 e0       	ldi	r18, 0x03	; 3
+     520:	30 e0       	ldi	r19, 0x00	; 0
+     522:	42 e0       	ldi	r20, 0x02	; 2
+     524:	50 e0       	ldi	r21, 0x00	; 0
+     526:	61 e0       	ldi	r22, 0x01	; 1
+     528:	70 e0       	ldi	r23, 0x00	; 0
+     52a:	82 e0       	ldi	r24, 0x02	; 2
+     52c:	90 e0       	ldi	r25, 0x00	; 0
+     52e:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     532:	d3 c6       	rjmp	.+3494   	; 0x12da <__stack+0xa7b>
+        case 4:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     534:	68 94       	set
+     536:	aa 24       	eor	r10, r10
+     538:	a1 f8       	bld	r10, 1
+     53a:	b1 2c       	mov	r11, r1
+     53c:	cc 24       	eor	r12, r12
+     53e:	c3 94       	inc	r12
+     540:	d1 2c       	mov	r13, r1
+     542:	68 94       	set
+     544:	ee 24       	eor	r14, r14
+     546:	e1 f8       	bld	r14, 1
+     548:	f1 2c       	mov	r15, r1
+     54a:	04 e0       	ldi	r16, 0x04	; 4
+     54c:	10 e0       	ldi	r17, 0x00	; 0
+     54e:	23 e0       	ldi	r18, 0x03	; 3
+     550:	30 e0       	ldi	r19, 0x00	; 0
+     552:	42 e0       	ldi	r20, 0x02	; 2
+     554:	50 e0       	ldi	r21, 0x00	; 0
+     556:	61 e0       	ldi	r22, 0x01	; 1
+     558:	70 e0       	ldi	r23, 0x00	; 0
+     55a:	82 e0       	ldi	r24, 0x02	; 2
+     55c:	90 e0       	ldi	r25, 0x00	; 0
+     55e:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     562:	bb c6       	rjmp	.+3446   	; 0x12da <__stack+0xa7b>
+        case 5:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     564:	68 94       	set
+     566:	aa 24       	eor	r10, r10
+     568:	a1 f8       	bld	r10, 1
+     56a:	b1 2c       	mov	r11, r1
+     56c:	cc 24       	eor	r12, r12
+     56e:	c3 94       	inc	r12
+     570:	d1 2c       	mov	r13, r1
+     572:	68 94       	set
+     574:	ee 24       	eor	r14, r14
+     576:	e1 f8       	bld	r14, 1
+     578:	f1 2c       	mov	r15, r1
+     57a:	04 e0       	ldi	r16, 0x04	; 4
+     57c:	10 e0       	ldi	r17, 0x00	; 0
+     57e:	23 e0       	ldi	r18, 0x03	; 3
+     580:	30 e0       	ldi	r19, 0x00	; 0
+     582:	42 e0       	ldi	r20, 0x02	; 2
+     584:	50 e0       	ldi	r21, 0x00	; 0
+     586:	61 e0       	ldi	r22, 0x01	; 1
+     588:	70 e0       	ldi	r23, 0x00	; 0
+     58a:	82 e0       	ldi	r24, 0x02	; 2
+     58c:	90 e0       	ldi	r25, 0x00	; 0
+     58e:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     592:	a3 c6       	rjmp	.+3398   	; 0x12da <__stack+0xa7b>
+        case 6:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     594:	68 94       	set
+     596:	aa 24       	eor	r10, r10
+     598:	a1 f8       	bld	r10, 1
+     59a:	b1 2c       	mov	r11, r1
+     59c:	cc 24       	eor	r12, r12
+     59e:	c3 94       	inc	r12
+     5a0:	d1 2c       	mov	r13, r1
+     5a2:	68 94       	set
+     5a4:	ee 24       	eor	r14, r14
+     5a6:	e1 f8       	bld	r14, 1
+     5a8:	f1 2c       	mov	r15, r1
+     5aa:	04 e0       	ldi	r16, 0x04	; 4
+     5ac:	10 e0       	ldi	r17, 0x00	; 0
+     5ae:	23 e0       	ldi	r18, 0x03	; 3
+     5b0:	30 e0       	ldi	r19, 0x00	; 0
+     5b2:	42 e0       	ldi	r20, 0x02	; 2
+     5b4:	50 e0       	ldi	r21, 0x00	; 0
+     5b6:	61 e0       	ldi	r22, 0x01	; 1
+     5b8:	70 e0       	ldi	r23, 0x00	; 0
+     5ba:	82 e0       	ldi	r24, 0x02	; 2
+     5bc:	90 e0       	ldi	r25, 0x00	; 0
+     5be:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     5c2:	8b c6       	rjmp	.+3350   	; 0x12da <__stack+0xa7b>
+        case 7:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     5c4:	68 94       	set
+     5c6:	aa 24       	eor	r10, r10
+     5c8:	a1 f8       	bld	r10, 1
+     5ca:	b1 2c       	mov	r11, r1
+     5cc:	cc 24       	eor	r12, r12
+     5ce:	c3 94       	inc	r12
+     5d0:	d1 2c       	mov	r13, r1
+     5d2:	68 94       	set
+     5d4:	ee 24       	eor	r14, r14
+     5d6:	e1 f8       	bld	r14, 1
+     5d8:	f1 2c       	mov	r15, r1
+     5da:	04 e0       	ldi	r16, 0x04	; 4
+     5dc:	10 e0       	ldi	r17, 0x00	; 0
+     5de:	23 e0       	ldi	r18, 0x03	; 3
+     5e0:	30 e0       	ldi	r19, 0x00	; 0
+     5e2:	42 e0       	ldi	r20, 0x02	; 2
+     5e4:	50 e0       	ldi	r21, 0x00	; 0
+     5e6:	61 e0       	ldi	r22, 0x01	; 1
+     5e8:	70 e0       	ldi	r23, 0x00	; 0
+     5ea:	82 e0       	ldi	r24, 0x02	; 2
+     5ec:	90 e0       	ldi	r25, 0x00	; 0
+     5ee:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     5f2:	73 c6       	rjmp	.+3302   	; 0x12da <__stack+0xa7b>
+        case 8:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     5f4:	68 94       	set
+     5f6:	aa 24       	eor	r10, r10
+     5f8:	a1 f8       	bld	r10, 1
+     5fa:	b1 2c       	mov	r11, r1
+     5fc:	cc 24       	eor	r12, r12
+     5fe:	c3 94       	inc	r12
+     600:	d1 2c       	mov	r13, r1
+     602:	68 94       	set
+     604:	ee 24       	eor	r14, r14
+     606:	e1 f8       	bld	r14, 1
+     608:	f1 2c       	mov	r15, r1
+     60a:	04 e0       	ldi	r16, 0x04	; 4
+     60c:	10 e0       	ldi	r17, 0x00	; 0
+     60e:	23 e0       	ldi	r18, 0x03	; 3
+     610:	30 e0       	ldi	r19, 0x00	; 0
+     612:	42 e0       	ldi	r20, 0x02	; 2
+     614:	50 e0       	ldi	r21, 0x00	; 0
+     616:	61 e0       	ldi	r22, 0x01	; 1
+     618:	70 e0       	ldi	r23, 0x00	; 0
+     61a:	82 e0       	ldi	r24, 0x02	; 2
+     61c:	90 e0       	ldi	r25, 0x00	; 0
+     61e:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     622:	5b c6       	rjmp	.+3254   	; 0x12da <__stack+0xa7b>
+        case 9:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     624:	68 94       	set
+     626:	aa 24       	eor	r10, r10
+     628:	a1 f8       	bld	r10, 1
+     62a:	b1 2c       	mov	r11, r1
+     62c:	cc 24       	eor	r12, r12
+     62e:	c3 94       	inc	r12
+     630:	d1 2c       	mov	r13, r1
+     632:	68 94       	set
+     634:	ee 24       	eor	r14, r14
+     636:	e1 f8       	bld	r14, 1
+     638:	f1 2c       	mov	r15, r1
+     63a:	04 e0       	ldi	r16, 0x04	; 4
+     63c:	10 e0       	ldi	r17, 0x00	; 0
+     63e:	23 e0       	ldi	r18, 0x03	; 3
+     640:	30 e0       	ldi	r19, 0x00	; 0
+     642:	42 e0       	ldi	r20, 0x02	; 2
+     644:	50 e0       	ldi	r21, 0x00	; 0
+     646:	61 e0       	ldi	r22, 0x01	; 1
+     648:	70 e0       	ldi	r23, 0x00	; 0
+     64a:	82 e0       	ldi	r24, 0x02	; 2
+     64c:	90 e0       	ldi	r25, 0x00	; 0
+     64e:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     652:	43 c6       	rjmp	.+3206   	; 0x12da <__stack+0xa7b>
+        break;
+    case 3:
+        switch (personNum)
+        {
+        case 1:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     654:	68 94       	set
+     656:	aa 24       	eor	r10, r10
+     658:	a1 f8       	bld	r10, 1
+     65a:	b1 2c       	mov	r11, r1
+     65c:	cc 24       	eor	r12, r12
+     65e:	c3 94       	inc	r12
+     660:	d1 2c       	mov	r13, r1
+     662:	68 94       	set
+     664:	ee 24       	eor	r14, r14
+     666:	e1 f8       	bld	r14, 1
+     668:	f1 2c       	mov	r15, r1
+     66a:	04 e0       	ldi	r16, 0x04	; 4
+     66c:	10 e0       	ldi	r17, 0x00	; 0
+     66e:	23 e0       	ldi	r18, 0x03	; 3
+     670:	30 e0       	ldi	r19, 0x00	; 0
+     672:	42 e0       	ldi	r20, 0x02	; 2
+     674:	50 e0       	ldi	r21, 0x00	; 0
+     676:	61 e0       	ldi	r22, 0x01	; 1
+     678:	70 e0       	ldi	r23, 0x00	; 0
+     67a:	82 e0       	ldi	r24, 0x02	; 2
+     67c:	90 e0       	ldi	r25, 0x00	; 0
+     67e:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     682:	2b c6       	rjmp	.+3158   	; 0x12da <__stack+0xa7b>
+        case 2:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     684:	68 94       	set
+     686:	aa 24       	eor	r10, r10
+     688:	a1 f8       	bld	r10, 1
+     68a:	b1 2c       	mov	r11, r1
+     68c:	cc 24       	eor	r12, r12
+     68e:	c3 94       	inc	r12
+     690:	d1 2c       	mov	r13, r1
+     692:	68 94       	set
+     694:	ee 24       	eor	r14, r14
+     696:	e1 f8       	bld	r14, 1
+     698:	f1 2c       	mov	r15, r1
+     69a:	04 e0       	ldi	r16, 0x04	; 4
+     69c:	10 e0       	ldi	r17, 0x00	; 0
+     69e:	23 e0       	ldi	r18, 0x03	; 3
+     6a0:	30 e0       	ldi	r19, 0x00	; 0
+     6a2:	42 e0       	ldi	r20, 0x02	; 2
+     6a4:	50 e0       	ldi	r21, 0x00	; 0
+     6a6:	61 e0       	ldi	r22, 0x01	; 1
+     6a8:	70 e0       	ldi	r23, 0x00	; 0
+     6aa:	82 e0       	ldi	r24, 0x02	; 2
+     6ac:	90 e0       	ldi	r25, 0x00	; 0
+     6ae:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     6b2:	13 c6       	rjmp	.+3110   	; 0x12da <__stack+0xa7b>
+        case 3:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     6b4:	68 94       	set
+     6b6:	aa 24       	eor	r10, r10
+     6b8:	a1 f8       	bld	r10, 1
+     6ba:	b1 2c       	mov	r11, r1
+     6bc:	cc 24       	eor	r12, r12
+     6be:	c3 94       	inc	r12
+     6c0:	d1 2c       	mov	r13, r1
+     6c2:	68 94       	set
+     6c4:	ee 24       	eor	r14, r14
+     6c6:	e1 f8       	bld	r14, 1
+     6c8:	f1 2c       	mov	r15, r1
+     6ca:	04 e0       	ldi	r16, 0x04	; 4
+     6cc:	10 e0       	ldi	r17, 0x00	; 0
+     6ce:	23 e0       	ldi	r18, 0x03	; 3
+     6d0:	30 e0       	ldi	r19, 0x00	; 0
+     6d2:	42 e0       	ldi	r20, 0x02	; 2
+     6d4:	50 e0       	ldi	r21, 0x00	; 0
+     6d6:	61 e0       	ldi	r22, 0x01	; 1
+     6d8:	70 e0       	ldi	r23, 0x00	; 0
+     6da:	82 e0       	ldi	r24, 0x02	; 2
+     6dc:	90 e0       	ldi	r25, 0x00	; 0
+     6de:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     6e2:	fb c5       	rjmp	.+3062   	; 0x12da <__stack+0xa7b>
+        case 4:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     6e4:	68 94       	set
+     6e6:	aa 24       	eor	r10, r10
+     6e8:	a1 f8       	bld	r10, 1
+     6ea:	b1 2c       	mov	r11, r1
+     6ec:	cc 24       	eor	r12, r12
+     6ee:	c3 94       	inc	r12
+     6f0:	d1 2c       	mov	r13, r1
+     6f2:	68 94       	set
+     6f4:	ee 24       	eor	r14, r14
+     6f6:	e1 f8       	bld	r14, 1
+     6f8:	f1 2c       	mov	r15, r1
+     6fa:	04 e0       	ldi	r16, 0x04	; 4
+     6fc:	10 e0       	ldi	r17, 0x00	; 0
+     6fe:	23 e0       	ldi	r18, 0x03	; 3
+     700:	30 e0       	ldi	r19, 0x00	; 0
+     702:	42 e0       	ldi	r20, 0x02	; 2
+     704:	50 e0       	ldi	r21, 0x00	; 0
+     706:	61 e0       	ldi	r22, 0x01	; 1
+     708:	70 e0       	ldi	r23, 0x00	; 0
+     70a:	82 e0       	ldi	r24, 0x02	; 2
+     70c:	90 e0       	ldi	r25, 0x00	; 0
+     70e:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     712:	e3 c5       	rjmp	.+3014   	; 0x12da <__stack+0xa7b>
+        case 5:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     714:	68 94       	set
+     716:	aa 24       	eor	r10, r10
+     718:	a1 f8       	bld	r10, 1
+     71a:	b1 2c       	mov	r11, r1
+     71c:	cc 24       	eor	r12, r12
+     71e:	c3 94       	inc	r12
+     720:	d1 2c       	mov	r13, r1
+     722:	68 94       	set
+     724:	ee 24       	eor	r14, r14
+     726:	e1 f8       	bld	r14, 1
+     728:	f1 2c       	mov	r15, r1
+     72a:	04 e0       	ldi	r16, 0x04	; 4
+     72c:	10 e0       	ldi	r17, 0x00	; 0
+     72e:	23 e0       	ldi	r18, 0x03	; 3
+     730:	30 e0       	ldi	r19, 0x00	; 0
+     732:	42 e0       	ldi	r20, 0x02	; 2
+     734:	50 e0       	ldi	r21, 0x00	; 0
+     736:	61 e0       	ldi	r22, 0x01	; 1
+     738:	70 e0       	ldi	r23, 0x00	; 0
+     73a:	82 e0       	ldi	r24, 0x02	; 2
+     73c:	90 e0       	ldi	r25, 0x00	; 0
+     73e:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     742:	cb c5       	rjmp	.+2966   	; 0x12da <__stack+0xa7b>
+        case 6:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     744:	68 94       	set
+     746:	aa 24       	eor	r10, r10
+     748:	a1 f8       	bld	r10, 1
+     74a:	b1 2c       	mov	r11, r1
+     74c:	cc 24       	eor	r12, r12
+     74e:	c3 94       	inc	r12
+     750:	d1 2c       	mov	r13, r1
+     752:	68 94       	set
+     754:	ee 24       	eor	r14, r14
+     756:	e1 f8       	bld	r14, 1
+     758:	f1 2c       	mov	r15, r1
+     75a:	04 e0       	ldi	r16, 0x04	; 4
+     75c:	10 e0       	ldi	r17, 0x00	; 0
+     75e:	23 e0       	ldi	r18, 0x03	; 3
+     760:	30 e0       	ldi	r19, 0x00	; 0
+     762:	42 e0       	ldi	r20, 0x02	; 2
+     764:	50 e0       	ldi	r21, 0x00	; 0
+     766:	61 e0       	ldi	r22, 0x01	; 1
+     768:	70 e0       	ldi	r23, 0x00	; 0
+     76a:	82 e0       	ldi	r24, 0x02	; 2
+     76c:	90 e0       	ldi	r25, 0x00	; 0
+     76e:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     772:	b3 c5       	rjmp	.+2918   	; 0x12da <__stack+0xa7b>
+        case 7:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     774:	68 94       	set
+     776:	aa 24       	eor	r10, r10
+     778:	a1 f8       	bld	r10, 1
+     77a:	b1 2c       	mov	r11, r1
+     77c:	cc 24       	eor	r12, r12
+     77e:	c3 94       	inc	r12
+     780:	d1 2c       	mov	r13, r1
+     782:	68 94       	set
+     784:	ee 24       	eor	r14, r14
+     786:	e1 f8       	bld	r14, 1
+     788:	f1 2c       	mov	r15, r1
+     78a:	04 e0       	ldi	r16, 0x04	; 4
+     78c:	10 e0       	ldi	r17, 0x00	; 0
+     78e:	23 e0       	ldi	r18, 0x03	; 3
+     790:	30 e0       	ldi	r19, 0x00	; 0
+     792:	42 e0       	ldi	r20, 0x02	; 2
+     794:	50 e0       	ldi	r21, 0x00	; 0
+     796:	61 e0       	ldi	r22, 0x01	; 1
+     798:	70 e0       	ldi	r23, 0x00	; 0
+     79a:	82 e0       	ldi	r24, 0x02	; 2
+     79c:	90 e0       	ldi	r25, 0x00	; 0
+     79e:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     7a2:	9b c5       	rjmp	.+2870   	; 0x12da <__stack+0xa7b>
+        case 8:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     7a4:	68 94       	set
+     7a6:	aa 24       	eor	r10, r10
+     7a8:	a1 f8       	bld	r10, 1
+     7aa:	b1 2c       	mov	r11, r1
+     7ac:	cc 24       	eor	r12, r12
+     7ae:	c3 94       	inc	r12
+     7b0:	d1 2c       	mov	r13, r1
+     7b2:	68 94       	set
+     7b4:	ee 24       	eor	r14, r14
+     7b6:	e1 f8       	bld	r14, 1
+     7b8:	f1 2c       	mov	r15, r1
+     7ba:	04 e0       	ldi	r16, 0x04	; 4
+     7bc:	10 e0       	ldi	r17, 0x00	; 0
+     7be:	23 e0       	ldi	r18, 0x03	; 3
+     7c0:	30 e0       	ldi	r19, 0x00	; 0
+     7c2:	42 e0       	ldi	r20, 0x02	; 2
+     7c4:	50 e0       	ldi	r21, 0x00	; 0
+     7c6:	61 e0       	ldi	r22, 0x01	; 1
+     7c8:	70 e0       	ldi	r23, 0x00	; 0
+     7ca:	82 e0       	ldi	r24, 0x02	; 2
+     7cc:	90 e0       	ldi	r25, 0x00	; 0
+     7ce:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     7d2:	83 c5       	rjmp	.+2822   	; 0x12da <__stack+0xa7b>
+        case 9:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     7d4:	68 94       	set
+     7d6:	aa 24       	eor	r10, r10
+     7d8:	a1 f8       	bld	r10, 1
+     7da:	b1 2c       	mov	r11, r1
+     7dc:	cc 24       	eor	r12, r12
+     7de:	c3 94       	inc	r12
+     7e0:	d1 2c       	mov	r13, r1
+     7e2:	68 94       	set
+     7e4:	ee 24       	eor	r14, r14
+     7e6:	e1 f8       	bld	r14, 1
+     7e8:	f1 2c       	mov	r15, r1
+     7ea:	04 e0       	ldi	r16, 0x04	; 4
+     7ec:	10 e0       	ldi	r17, 0x00	; 0
+     7ee:	23 e0       	ldi	r18, 0x03	; 3
+     7f0:	30 e0       	ldi	r19, 0x00	; 0
+     7f2:	42 e0       	ldi	r20, 0x02	; 2
+     7f4:	50 e0       	ldi	r21, 0x00	; 0
+     7f6:	61 e0       	ldi	r22, 0x01	; 1
+     7f8:	70 e0       	ldi	r23, 0x00	; 0
+     7fa:	82 e0       	ldi	r24, 0x02	; 2
+     7fc:	90 e0       	ldi	r25, 0x00	; 0
+     7fe:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     802:	6b c5       	rjmp	.+2774   	; 0x12da <__stack+0xa7b>
+        break;
+    case 4:
+        switch (personNum)
+        {
+        case 1:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     804:	68 94       	set
+     806:	aa 24       	eor	r10, r10
+     808:	a1 f8       	bld	r10, 1
+     80a:	b1 2c       	mov	r11, r1
+     80c:	cc 24       	eor	r12, r12
+     80e:	c3 94       	inc	r12
+     810:	d1 2c       	mov	r13, r1
+     812:	68 94       	set
+     814:	ee 24       	eor	r14, r14
+     816:	e1 f8       	bld	r14, 1
+     818:	f1 2c       	mov	r15, r1
+     81a:	04 e0       	ldi	r16, 0x04	; 4
+     81c:	10 e0       	ldi	r17, 0x00	; 0
+     81e:	23 e0       	ldi	r18, 0x03	; 3
+     820:	30 e0       	ldi	r19, 0x00	; 0
+     822:	42 e0       	ldi	r20, 0x02	; 2
+     824:	50 e0       	ldi	r21, 0x00	; 0
+     826:	61 e0       	ldi	r22, 0x01	; 1
+     828:	70 e0       	ldi	r23, 0x00	; 0
+     82a:	82 e0       	ldi	r24, 0x02	; 2
+     82c:	90 e0       	ldi	r25, 0x00	; 0
+     82e:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     832:	53 c5       	rjmp	.+2726   	; 0x12da <__stack+0xa7b>
+        case 2:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     834:	68 94       	set
+     836:	aa 24       	eor	r10, r10
+     838:	a1 f8       	bld	r10, 1
+     83a:	b1 2c       	mov	r11, r1
+     83c:	cc 24       	eor	r12, r12
+     83e:	c3 94       	inc	r12
+     840:	d1 2c       	mov	r13, r1
+     842:	68 94       	set
+     844:	ee 24       	eor	r14, r14
+     846:	e1 f8       	bld	r14, 1
+     848:	f1 2c       	mov	r15, r1
+     84a:	04 e0       	ldi	r16, 0x04	; 4
+     84c:	10 e0       	ldi	r17, 0x00	; 0
+     84e:	23 e0       	ldi	r18, 0x03	; 3
+     850:	30 e0       	ldi	r19, 0x00	; 0
+     852:	42 e0       	ldi	r20, 0x02	; 2
+     854:	50 e0       	ldi	r21, 0x00	; 0
+     856:	61 e0       	ldi	r22, 0x01	; 1
+     858:	70 e0       	ldi	r23, 0x00	; 0
+     85a:	82 e0       	ldi	r24, 0x02	; 2
+     85c:	90 e0       	ldi	r25, 0x00	; 0
+     85e:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     862:	3b c5       	rjmp	.+2678   	; 0x12da <__stack+0xa7b>
+        case 3:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     864:	68 94       	set
+     866:	aa 24       	eor	r10, r10
+     868:	a1 f8       	bld	r10, 1
+     86a:	b1 2c       	mov	r11, r1
+     86c:	cc 24       	eor	r12, r12
+     86e:	c3 94       	inc	r12
+     870:	d1 2c       	mov	r13, r1
+     872:	68 94       	set
+     874:	ee 24       	eor	r14, r14
+     876:	e1 f8       	bld	r14, 1
+     878:	f1 2c       	mov	r15, r1
+     87a:	04 e0       	ldi	r16, 0x04	; 4
+     87c:	10 e0       	ldi	r17, 0x00	; 0
+     87e:	23 e0       	ldi	r18, 0x03	; 3
+     880:	30 e0       	ldi	r19, 0x00	; 0
+     882:	42 e0       	ldi	r20, 0x02	; 2
+     884:	50 e0       	ldi	r21, 0x00	; 0
+     886:	61 e0       	ldi	r22, 0x01	; 1
+     888:	70 e0       	ldi	r23, 0x00	; 0
+     88a:	82 e0       	ldi	r24, 0x02	; 2
+     88c:	90 e0       	ldi	r25, 0x00	; 0
+     88e:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     892:	23 c5       	rjmp	.+2630   	; 0x12da <__stack+0xa7b>
+        case 4:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     894:	68 94       	set
+     896:	aa 24       	eor	r10, r10
+     898:	a1 f8       	bld	r10, 1
+     89a:	b1 2c       	mov	r11, r1
+     89c:	cc 24       	eor	r12, r12
+     89e:	c3 94       	inc	r12
+     8a0:	d1 2c       	mov	r13, r1
+     8a2:	68 94       	set
+     8a4:	ee 24       	eor	r14, r14
+     8a6:	e1 f8       	bld	r14, 1
+     8a8:	f1 2c       	mov	r15, r1
+     8aa:	04 e0       	ldi	r16, 0x04	; 4
+     8ac:	10 e0       	ldi	r17, 0x00	; 0
+     8ae:	23 e0       	ldi	r18, 0x03	; 3
+     8b0:	30 e0       	ldi	r19, 0x00	; 0
+     8b2:	42 e0       	ldi	r20, 0x02	; 2
+     8b4:	50 e0       	ldi	r21, 0x00	; 0
+     8b6:	61 e0       	ldi	r22, 0x01	; 1
+     8b8:	70 e0       	ldi	r23, 0x00	; 0
+     8ba:	82 e0       	ldi	r24, 0x02	; 2
+     8bc:	90 e0       	ldi	r25, 0x00	; 0
+     8be:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     8c2:	0b c5       	rjmp	.+2582   	; 0x12da <__stack+0xa7b>
+        case 5:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     8c4:	68 94       	set
+     8c6:	aa 24       	eor	r10, r10
+     8c8:	a1 f8       	bld	r10, 1
+     8ca:	b1 2c       	mov	r11, r1
+     8cc:	cc 24       	eor	r12, r12
+     8ce:	c3 94       	inc	r12
+     8d0:	d1 2c       	mov	r13, r1
+     8d2:	68 94       	set
+     8d4:	ee 24       	eor	r14, r14
+     8d6:	e1 f8       	bld	r14, 1
+     8d8:	f1 2c       	mov	r15, r1
+     8da:	04 e0       	ldi	r16, 0x04	; 4
+     8dc:	10 e0       	ldi	r17, 0x00	; 0
+     8de:	23 e0       	ldi	r18, 0x03	; 3
+     8e0:	30 e0       	ldi	r19, 0x00	; 0
+     8e2:	42 e0       	ldi	r20, 0x02	; 2
+     8e4:	50 e0       	ldi	r21, 0x00	; 0
+     8e6:	61 e0       	ldi	r22, 0x01	; 1
+     8e8:	70 e0       	ldi	r23, 0x00	; 0
+     8ea:	82 e0       	ldi	r24, 0x02	; 2
+     8ec:	90 e0       	ldi	r25, 0x00	; 0
+     8ee:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     8f2:	f3 c4       	rjmp	.+2534   	; 0x12da <__stack+0xa7b>
+        case 6:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     8f4:	68 94       	set
+     8f6:	aa 24       	eor	r10, r10
+     8f8:	a1 f8       	bld	r10, 1
+     8fa:	b1 2c       	mov	r11, r1
+     8fc:	cc 24       	eor	r12, r12
+     8fe:	c3 94       	inc	r12
+     900:	d1 2c       	mov	r13, r1
+     902:	68 94       	set
+     904:	ee 24       	eor	r14, r14
+     906:	e1 f8       	bld	r14, 1
+     908:	f1 2c       	mov	r15, r1
+     90a:	04 e0       	ldi	r16, 0x04	; 4
+     90c:	10 e0       	ldi	r17, 0x00	; 0
+     90e:	23 e0       	ldi	r18, 0x03	; 3
+     910:	30 e0       	ldi	r19, 0x00	; 0
+     912:	42 e0       	ldi	r20, 0x02	; 2
+     914:	50 e0       	ldi	r21, 0x00	; 0
+     916:	61 e0       	ldi	r22, 0x01	; 1
+     918:	70 e0       	ldi	r23, 0x00	; 0
+     91a:	82 e0       	ldi	r24, 0x02	; 2
+     91c:	90 e0       	ldi	r25, 0x00	; 0
+     91e:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     922:	db c4       	rjmp	.+2486   	; 0x12da <__stack+0xa7b>
+        case 7:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     924:	68 94       	set
+     926:	aa 24       	eor	r10, r10
+     928:	a1 f8       	bld	r10, 1
+     92a:	b1 2c       	mov	r11, r1
+     92c:	cc 24       	eor	r12, r12
+     92e:	c3 94       	inc	r12
+     930:	d1 2c       	mov	r13, r1
+     932:	68 94       	set
+     934:	ee 24       	eor	r14, r14
+     936:	e1 f8       	bld	r14, 1
+     938:	f1 2c       	mov	r15, r1
+     93a:	04 e0       	ldi	r16, 0x04	; 4
+     93c:	10 e0       	ldi	r17, 0x00	; 0
+     93e:	23 e0       	ldi	r18, 0x03	; 3
+     940:	30 e0       	ldi	r19, 0x00	; 0
+     942:	42 e0       	ldi	r20, 0x02	; 2
+     944:	50 e0       	ldi	r21, 0x00	; 0
+     946:	61 e0       	ldi	r22, 0x01	; 1
+     948:	70 e0       	ldi	r23, 0x00	; 0
+     94a:	82 e0       	ldi	r24, 0x02	; 2
+     94c:	90 e0       	ldi	r25, 0x00	; 0
+     94e:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     952:	c3 c4       	rjmp	.+2438   	; 0x12da <__stack+0xa7b>
+        case 8:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     954:	68 94       	set
+     956:	aa 24       	eor	r10, r10
+     958:	a1 f8       	bld	r10, 1
+     95a:	b1 2c       	mov	r11, r1
+     95c:	cc 24       	eor	r12, r12
+     95e:	c3 94       	inc	r12
+     960:	d1 2c       	mov	r13, r1
+     962:	68 94       	set
+     964:	ee 24       	eor	r14, r14
+     966:	e1 f8       	bld	r14, 1
+     968:	f1 2c       	mov	r15, r1
+     96a:	04 e0       	ldi	r16, 0x04	; 4
+     96c:	10 e0       	ldi	r17, 0x00	; 0
+     96e:	23 e0       	ldi	r18, 0x03	; 3
+     970:	30 e0       	ldi	r19, 0x00	; 0
+     972:	42 e0       	ldi	r20, 0x02	; 2
+     974:	50 e0       	ldi	r21, 0x00	; 0
+     976:	61 e0       	ldi	r22, 0x01	; 1
+     978:	70 e0       	ldi	r23, 0x00	; 0
+     97a:	82 e0       	ldi	r24, 0x02	; 2
+     97c:	90 e0       	ldi	r25, 0x00	; 0
+     97e:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     982:	ab c4       	rjmp	.+2390   	; 0x12da <__stack+0xa7b>
+        case 9:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     984:	68 94       	set
+     986:	aa 24       	eor	r10, r10
+     988:	a1 f8       	bld	r10, 1
+     98a:	b1 2c       	mov	r11, r1
+     98c:	cc 24       	eor	r12, r12
+     98e:	c3 94       	inc	r12
+     990:	d1 2c       	mov	r13, r1
+     992:	68 94       	set
+     994:	ee 24       	eor	r14, r14
+     996:	e1 f8       	bld	r14, 1
+     998:	f1 2c       	mov	r15, r1
+     99a:	04 e0       	ldi	r16, 0x04	; 4
+     99c:	10 e0       	ldi	r17, 0x00	; 0
+     99e:	23 e0       	ldi	r18, 0x03	; 3
+     9a0:	30 e0       	ldi	r19, 0x00	; 0
+     9a2:	42 e0       	ldi	r20, 0x02	; 2
+     9a4:	50 e0       	ldi	r21, 0x00	; 0
+     9a6:	61 e0       	ldi	r22, 0x01	; 1
+     9a8:	70 e0       	ldi	r23, 0x00	; 0
+     9aa:	82 e0       	ldi	r24, 0x02	; 2
+     9ac:	90 e0       	ldi	r25, 0x00	; 0
+     9ae:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     9b2:	93 c4       	rjmp	.+2342   	; 0x12da <__stack+0xa7b>
+        break;
+    case 5:
+        switch (personNum)
+        {
+        case 1:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     9b4:	68 94       	set
+     9b6:	aa 24       	eor	r10, r10
+     9b8:	a1 f8       	bld	r10, 1
+     9ba:	b1 2c       	mov	r11, r1
+     9bc:	cc 24       	eor	r12, r12
+     9be:	c3 94       	inc	r12
+     9c0:	d1 2c       	mov	r13, r1
+     9c2:	68 94       	set
+     9c4:	ee 24       	eor	r14, r14
+     9c6:	e1 f8       	bld	r14, 1
+     9c8:	f1 2c       	mov	r15, r1
+     9ca:	04 e0       	ldi	r16, 0x04	; 4
+     9cc:	10 e0       	ldi	r17, 0x00	; 0
+     9ce:	23 e0       	ldi	r18, 0x03	; 3
+     9d0:	30 e0       	ldi	r19, 0x00	; 0
+     9d2:	42 e0       	ldi	r20, 0x02	; 2
+     9d4:	50 e0       	ldi	r21, 0x00	; 0
+     9d6:	61 e0       	ldi	r22, 0x01	; 1
+     9d8:	70 e0       	ldi	r23, 0x00	; 0
+     9da:	82 e0       	ldi	r24, 0x02	; 2
+     9dc:	90 e0       	ldi	r25, 0x00	; 0
+     9de:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     9e2:	7b c4       	rjmp	.+2294   	; 0x12da <__stack+0xa7b>
+        case 2:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     9e4:	68 94       	set
+     9e6:	aa 24       	eor	r10, r10
+     9e8:	a1 f8       	bld	r10, 1
+     9ea:	b1 2c       	mov	r11, r1
+     9ec:	cc 24       	eor	r12, r12
+     9ee:	c3 94       	inc	r12
+     9f0:	d1 2c       	mov	r13, r1
+     9f2:	68 94       	set
+     9f4:	ee 24       	eor	r14, r14
+     9f6:	e1 f8       	bld	r14, 1
+     9f8:	f1 2c       	mov	r15, r1
+     9fa:	04 e0       	ldi	r16, 0x04	; 4
+     9fc:	10 e0       	ldi	r17, 0x00	; 0
+     9fe:	23 e0       	ldi	r18, 0x03	; 3
+     a00:	30 e0       	ldi	r19, 0x00	; 0
+     a02:	42 e0       	ldi	r20, 0x02	; 2
+     a04:	50 e0       	ldi	r21, 0x00	; 0
+     a06:	61 e0       	ldi	r22, 0x01	; 1
+     a08:	70 e0       	ldi	r23, 0x00	; 0
+     a0a:	82 e0       	ldi	r24, 0x02	; 2
+     a0c:	90 e0       	ldi	r25, 0x00	; 0
+     a0e:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     a12:	63 c4       	rjmp	.+2246   	; 0x12da <__stack+0xa7b>
+        case 3:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     a14:	68 94       	set
+     a16:	aa 24       	eor	r10, r10
+     a18:	a1 f8       	bld	r10, 1
+     a1a:	b1 2c       	mov	r11, r1
+     a1c:	cc 24       	eor	r12, r12
+     a1e:	c3 94       	inc	r12
+     a20:	d1 2c       	mov	r13, r1
+     a22:	68 94       	set
+     a24:	ee 24       	eor	r14, r14
+     a26:	e1 f8       	bld	r14, 1
+     a28:	f1 2c       	mov	r15, r1
+     a2a:	04 e0       	ldi	r16, 0x04	; 4
+     a2c:	10 e0       	ldi	r17, 0x00	; 0
+     a2e:	23 e0       	ldi	r18, 0x03	; 3
+     a30:	30 e0       	ldi	r19, 0x00	; 0
+     a32:	42 e0       	ldi	r20, 0x02	; 2
+     a34:	50 e0       	ldi	r21, 0x00	; 0
+     a36:	61 e0       	ldi	r22, 0x01	; 1
+     a38:	70 e0       	ldi	r23, 0x00	; 0
+     a3a:	82 e0       	ldi	r24, 0x02	; 2
+     a3c:	90 e0       	ldi	r25, 0x00	; 0
+     a3e:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     a42:	4b c4       	rjmp	.+2198   	; 0x12da <__stack+0xa7b>
+        case 4:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     a44:	68 94       	set
+     a46:	aa 24       	eor	r10, r10
+     a48:	a1 f8       	bld	r10, 1
+     a4a:	b1 2c       	mov	r11, r1
+     a4c:	cc 24       	eor	r12, r12
+     a4e:	c3 94       	inc	r12
+     a50:	d1 2c       	mov	r13, r1
+     a52:	68 94       	set
+     a54:	ee 24       	eor	r14, r14
+     a56:	e1 f8       	bld	r14, 1
+     a58:	f1 2c       	mov	r15, r1
+     a5a:	04 e0       	ldi	r16, 0x04	; 4
+     a5c:	10 e0       	ldi	r17, 0x00	; 0
+     a5e:	23 e0       	ldi	r18, 0x03	; 3
+     a60:	30 e0       	ldi	r19, 0x00	; 0
+     a62:	42 e0       	ldi	r20, 0x02	; 2
+     a64:	50 e0       	ldi	r21, 0x00	; 0
+     a66:	61 e0       	ldi	r22, 0x01	; 1
+     a68:	70 e0       	ldi	r23, 0x00	; 0
+     a6a:	82 e0       	ldi	r24, 0x02	; 2
+     a6c:	90 e0       	ldi	r25, 0x00	; 0
+     a6e:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     a72:	33 c4       	rjmp	.+2150   	; 0x12da <__stack+0xa7b>
+        case 5:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     a74:	68 94       	set
+     a76:	aa 24       	eor	r10, r10
+     a78:	a1 f8       	bld	r10, 1
+     a7a:	b1 2c       	mov	r11, r1
+     a7c:	cc 24       	eor	r12, r12
+     a7e:	c3 94       	inc	r12
+     a80:	d1 2c       	mov	r13, r1
+     a82:	68 94       	set
+     a84:	ee 24       	eor	r14, r14
+     a86:	e1 f8       	bld	r14, 1
+     a88:	f1 2c       	mov	r15, r1
+     a8a:	04 e0       	ldi	r16, 0x04	; 4
+     a8c:	10 e0       	ldi	r17, 0x00	; 0
+     a8e:	23 e0       	ldi	r18, 0x03	; 3
+     a90:	30 e0       	ldi	r19, 0x00	; 0
+     a92:	42 e0       	ldi	r20, 0x02	; 2
+     a94:	50 e0       	ldi	r21, 0x00	; 0
+     a96:	61 e0       	ldi	r22, 0x01	; 1
+     a98:	70 e0       	ldi	r23, 0x00	; 0
+     a9a:	82 e0       	ldi	r24, 0x02	; 2
+     a9c:	90 e0       	ldi	r25, 0x00	; 0
+     a9e:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     aa2:	1b c4       	rjmp	.+2102   	; 0x12da <__stack+0xa7b>
+        case 6:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     aa4:	68 94       	set
+     aa6:	aa 24       	eor	r10, r10
+     aa8:	a1 f8       	bld	r10, 1
+     aaa:	b1 2c       	mov	r11, r1
+     aac:	cc 24       	eor	r12, r12
+     aae:	c3 94       	inc	r12
+     ab0:	d1 2c       	mov	r13, r1
+     ab2:	68 94       	set
+     ab4:	ee 24       	eor	r14, r14
+     ab6:	e1 f8       	bld	r14, 1
+     ab8:	f1 2c       	mov	r15, r1
+     aba:	04 e0       	ldi	r16, 0x04	; 4
+     abc:	10 e0       	ldi	r17, 0x00	; 0
+     abe:	23 e0       	ldi	r18, 0x03	; 3
+     ac0:	30 e0       	ldi	r19, 0x00	; 0
+     ac2:	42 e0       	ldi	r20, 0x02	; 2
+     ac4:	50 e0       	ldi	r21, 0x00	; 0
+     ac6:	61 e0       	ldi	r22, 0x01	; 1
+     ac8:	70 e0       	ldi	r23, 0x00	; 0
+     aca:	82 e0       	ldi	r24, 0x02	; 2
+     acc:	90 e0       	ldi	r25, 0x00	; 0
+     ace:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     ad2:	03 c4       	rjmp	.+2054   	; 0x12da <__stack+0xa7b>
+        case 7:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     ad4:	68 94       	set
+     ad6:	aa 24       	eor	r10, r10
+     ad8:	a1 f8       	bld	r10, 1
+     ada:	b1 2c       	mov	r11, r1
+     adc:	cc 24       	eor	r12, r12
+     ade:	c3 94       	inc	r12
+     ae0:	d1 2c       	mov	r13, r1
+     ae2:	68 94       	set
+     ae4:	ee 24       	eor	r14, r14
+     ae6:	e1 f8       	bld	r14, 1
+     ae8:	f1 2c       	mov	r15, r1
+     aea:	04 e0       	ldi	r16, 0x04	; 4
+     aec:	10 e0       	ldi	r17, 0x00	; 0
+     aee:	23 e0       	ldi	r18, 0x03	; 3
+     af0:	30 e0       	ldi	r19, 0x00	; 0
+     af2:	42 e0       	ldi	r20, 0x02	; 2
+     af4:	50 e0       	ldi	r21, 0x00	; 0
+     af6:	61 e0       	ldi	r22, 0x01	; 1
+     af8:	70 e0       	ldi	r23, 0x00	; 0
+     afa:	82 e0       	ldi	r24, 0x02	; 2
+     afc:	90 e0       	ldi	r25, 0x00	; 0
+     afe:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     b02:	eb c3       	rjmp	.+2006   	; 0x12da <__stack+0xa7b>
+        case 8:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     b04:	68 94       	set
+     b06:	aa 24       	eor	r10, r10
+     b08:	a1 f8       	bld	r10, 1
+     b0a:	b1 2c       	mov	r11, r1
+     b0c:	cc 24       	eor	r12, r12
+     b0e:	c3 94       	inc	r12
+     b10:	d1 2c       	mov	r13, r1
+     b12:	68 94       	set
+     b14:	ee 24       	eor	r14, r14
+     b16:	e1 f8       	bld	r14, 1
+     b18:	f1 2c       	mov	r15, r1
+     b1a:	04 e0       	ldi	r16, 0x04	; 4
+     b1c:	10 e0       	ldi	r17, 0x00	; 0
+     b1e:	23 e0       	ldi	r18, 0x03	; 3
+     b20:	30 e0       	ldi	r19, 0x00	; 0
+     b22:	42 e0       	ldi	r20, 0x02	; 2
+     b24:	50 e0       	ldi	r21, 0x00	; 0
+     b26:	61 e0       	ldi	r22, 0x01	; 1
+     b28:	70 e0       	ldi	r23, 0x00	; 0
+     b2a:	82 e0       	ldi	r24, 0x02	; 2
+     b2c:	90 e0       	ldi	r25, 0x00	; 0
+     b2e:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     b32:	d3 c3       	rjmp	.+1958   	; 0x12da <__stack+0xa7b>
+        case 9:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     b34:	68 94       	set
+     b36:	aa 24       	eor	r10, r10
+     b38:	a1 f8       	bld	r10, 1
+     b3a:	b1 2c       	mov	r11, r1
+     b3c:	cc 24       	eor	r12, r12
+     b3e:	c3 94       	inc	r12
+     b40:	d1 2c       	mov	r13, r1
+     b42:	68 94       	set
+     b44:	ee 24       	eor	r14, r14
+     b46:	e1 f8       	bld	r14, 1
+     b48:	f1 2c       	mov	r15, r1
+     b4a:	04 e0       	ldi	r16, 0x04	; 4
+     b4c:	10 e0       	ldi	r17, 0x00	; 0
+     b4e:	23 e0       	ldi	r18, 0x03	; 3
+     b50:	30 e0       	ldi	r19, 0x00	; 0
+     b52:	42 e0       	ldi	r20, 0x02	; 2
+     b54:	50 e0       	ldi	r21, 0x00	; 0
+     b56:	61 e0       	ldi	r22, 0x01	; 1
+     b58:	70 e0       	ldi	r23, 0x00	; 0
+     b5a:	82 e0       	ldi	r24, 0x02	; 2
+     b5c:	90 e0       	ldi	r25, 0x00	; 0
+     b5e:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     b62:	bb c3       	rjmp	.+1910   	; 0x12da <__stack+0xa7b>
+        break;
+    case 6:
+        switch (personNum)
+        {
+        case 1:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     b64:	68 94       	set
+     b66:	aa 24       	eor	r10, r10
+     b68:	a1 f8       	bld	r10, 1
+     b6a:	b1 2c       	mov	r11, r1
+     b6c:	cc 24       	eor	r12, r12
+     b6e:	c3 94       	inc	r12
+     b70:	d1 2c       	mov	r13, r1
+     b72:	68 94       	set
+     b74:	ee 24       	eor	r14, r14
+     b76:	e1 f8       	bld	r14, 1
+     b78:	f1 2c       	mov	r15, r1
+     b7a:	04 e0       	ldi	r16, 0x04	; 4
+     b7c:	10 e0       	ldi	r17, 0x00	; 0
+     b7e:	23 e0       	ldi	r18, 0x03	; 3
+     b80:	30 e0       	ldi	r19, 0x00	; 0
+     b82:	42 e0       	ldi	r20, 0x02	; 2
+     b84:	50 e0       	ldi	r21, 0x00	; 0
+     b86:	61 e0       	ldi	r22, 0x01	; 1
+     b88:	70 e0       	ldi	r23, 0x00	; 0
+     b8a:	82 e0       	ldi	r24, 0x02	; 2
+     b8c:	90 e0       	ldi	r25, 0x00	; 0
+     b8e:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     b92:	a3 c3       	rjmp	.+1862   	; 0x12da <__stack+0xa7b>
+        case 2:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     b94:	68 94       	set
+     b96:	aa 24       	eor	r10, r10
+     b98:	a1 f8       	bld	r10, 1
+     b9a:	b1 2c       	mov	r11, r1
+     b9c:	cc 24       	eor	r12, r12
+     b9e:	c3 94       	inc	r12
+     ba0:	d1 2c       	mov	r13, r1
+     ba2:	68 94       	set
+     ba4:	ee 24       	eor	r14, r14
+     ba6:	e1 f8       	bld	r14, 1
+     ba8:	f1 2c       	mov	r15, r1
+     baa:	04 e0       	ldi	r16, 0x04	; 4
+     bac:	10 e0       	ldi	r17, 0x00	; 0
+     bae:	23 e0       	ldi	r18, 0x03	; 3
+     bb0:	30 e0       	ldi	r19, 0x00	; 0
+     bb2:	42 e0       	ldi	r20, 0x02	; 2
+     bb4:	50 e0       	ldi	r21, 0x00	; 0
+     bb6:	61 e0       	ldi	r22, 0x01	; 1
+     bb8:	70 e0       	ldi	r23, 0x00	; 0
+     bba:	82 e0       	ldi	r24, 0x02	; 2
+     bbc:	90 e0       	ldi	r25, 0x00	; 0
+     bbe:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     bc2:	8b c3       	rjmp	.+1814   	; 0x12da <__stack+0xa7b>
+        case 3:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     bc4:	68 94       	set
+     bc6:	aa 24       	eor	r10, r10
+     bc8:	a1 f8       	bld	r10, 1
+     bca:	b1 2c       	mov	r11, r1
+     bcc:	cc 24       	eor	r12, r12
+     bce:	c3 94       	inc	r12
+     bd0:	d1 2c       	mov	r13, r1
+     bd2:	68 94       	set
+     bd4:	ee 24       	eor	r14, r14
+     bd6:	e1 f8       	bld	r14, 1
+     bd8:	f1 2c       	mov	r15, r1
+     bda:	04 e0       	ldi	r16, 0x04	; 4
+     bdc:	10 e0       	ldi	r17, 0x00	; 0
+     bde:	23 e0       	ldi	r18, 0x03	; 3
+     be0:	30 e0       	ldi	r19, 0x00	; 0
+     be2:	42 e0       	ldi	r20, 0x02	; 2
+     be4:	50 e0       	ldi	r21, 0x00	; 0
+     be6:	61 e0       	ldi	r22, 0x01	; 1
+     be8:	70 e0       	ldi	r23, 0x00	; 0
+     bea:	82 e0       	ldi	r24, 0x02	; 2
+     bec:	90 e0       	ldi	r25, 0x00	; 0
+     bee:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     bf2:	73 c3       	rjmp	.+1766   	; 0x12da <__stack+0xa7b>
+        case 4:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     bf4:	68 94       	set
+     bf6:	aa 24       	eor	r10, r10
+     bf8:	a1 f8       	bld	r10, 1
+     bfa:	b1 2c       	mov	r11, r1
+     bfc:	cc 24       	eor	r12, r12
+     bfe:	c3 94       	inc	r12
+     c00:	d1 2c       	mov	r13, r1
+     c02:	68 94       	set
+     c04:	ee 24       	eor	r14, r14
+     c06:	e1 f8       	bld	r14, 1
+     c08:	f1 2c       	mov	r15, r1
+     c0a:	04 e0       	ldi	r16, 0x04	; 4
+     c0c:	10 e0       	ldi	r17, 0x00	; 0
+     c0e:	23 e0       	ldi	r18, 0x03	; 3
+     c10:	30 e0       	ldi	r19, 0x00	; 0
+     c12:	42 e0       	ldi	r20, 0x02	; 2
+     c14:	50 e0       	ldi	r21, 0x00	; 0
+     c16:	61 e0       	ldi	r22, 0x01	; 1
+     c18:	70 e0       	ldi	r23, 0x00	; 0
+     c1a:	82 e0       	ldi	r24, 0x02	; 2
+     c1c:	90 e0       	ldi	r25, 0x00	; 0
+     c1e:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     c22:	5b c3       	rjmp	.+1718   	; 0x12da <__stack+0xa7b>
+        case 5:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     c24:	68 94       	set
+     c26:	aa 24       	eor	r10, r10
+     c28:	a1 f8       	bld	r10, 1
+     c2a:	b1 2c       	mov	r11, r1
+     c2c:	cc 24       	eor	r12, r12
+     c2e:	c3 94       	inc	r12
+     c30:	d1 2c       	mov	r13, r1
+     c32:	68 94       	set
+     c34:	ee 24       	eor	r14, r14
+     c36:	e1 f8       	bld	r14, 1
+     c38:	f1 2c       	mov	r15, r1
+     c3a:	04 e0       	ldi	r16, 0x04	; 4
+     c3c:	10 e0       	ldi	r17, 0x00	; 0
+     c3e:	23 e0       	ldi	r18, 0x03	; 3
+     c40:	30 e0       	ldi	r19, 0x00	; 0
+     c42:	42 e0       	ldi	r20, 0x02	; 2
+     c44:	50 e0       	ldi	r21, 0x00	; 0
+     c46:	61 e0       	ldi	r22, 0x01	; 1
+     c48:	70 e0       	ldi	r23, 0x00	; 0
+     c4a:	82 e0       	ldi	r24, 0x02	; 2
+     c4c:	90 e0       	ldi	r25, 0x00	; 0
+     c4e:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     c52:	43 c3       	rjmp	.+1670   	; 0x12da <__stack+0xa7b>
+        case 6:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     c54:	68 94       	set
+     c56:	aa 24       	eor	r10, r10
+     c58:	a1 f8       	bld	r10, 1
+     c5a:	b1 2c       	mov	r11, r1
+     c5c:	cc 24       	eor	r12, r12
+     c5e:	c3 94       	inc	r12
+     c60:	d1 2c       	mov	r13, r1
+     c62:	68 94       	set
+     c64:	ee 24       	eor	r14, r14
+     c66:	e1 f8       	bld	r14, 1
+     c68:	f1 2c       	mov	r15, r1
+     c6a:	04 e0       	ldi	r16, 0x04	; 4
+     c6c:	10 e0       	ldi	r17, 0x00	; 0
+     c6e:	23 e0       	ldi	r18, 0x03	; 3
+     c70:	30 e0       	ldi	r19, 0x00	; 0
+     c72:	42 e0       	ldi	r20, 0x02	; 2
+     c74:	50 e0       	ldi	r21, 0x00	; 0
+     c76:	61 e0       	ldi	r22, 0x01	; 1
+     c78:	70 e0       	ldi	r23, 0x00	; 0
+     c7a:	82 e0       	ldi	r24, 0x02	; 2
+     c7c:	90 e0       	ldi	r25, 0x00	; 0
+     c7e:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     c82:	2b c3       	rjmp	.+1622   	; 0x12da <__stack+0xa7b>
+        case 7:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     c84:	68 94       	set
+     c86:	aa 24       	eor	r10, r10
+     c88:	a1 f8       	bld	r10, 1
+     c8a:	b1 2c       	mov	r11, r1
+     c8c:	cc 24       	eor	r12, r12
+     c8e:	c3 94       	inc	r12
+     c90:	d1 2c       	mov	r13, r1
+     c92:	68 94       	set
+     c94:	ee 24       	eor	r14, r14
+     c96:	e1 f8       	bld	r14, 1
+     c98:	f1 2c       	mov	r15, r1
+     c9a:	04 e0       	ldi	r16, 0x04	; 4
+     c9c:	10 e0       	ldi	r17, 0x00	; 0
+     c9e:	23 e0       	ldi	r18, 0x03	; 3
+     ca0:	30 e0       	ldi	r19, 0x00	; 0
+     ca2:	42 e0       	ldi	r20, 0x02	; 2
+     ca4:	50 e0       	ldi	r21, 0x00	; 0
+     ca6:	61 e0       	ldi	r22, 0x01	; 1
+     ca8:	70 e0       	ldi	r23, 0x00	; 0
+     caa:	82 e0       	ldi	r24, 0x02	; 2
+     cac:	90 e0       	ldi	r25, 0x00	; 0
+     cae:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     cb2:	13 c3       	rjmp	.+1574   	; 0x12da <__stack+0xa7b>
+        case 8:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     cb4:	68 94       	set
+     cb6:	aa 24       	eor	r10, r10
+     cb8:	a1 f8       	bld	r10, 1
+     cba:	b1 2c       	mov	r11, r1
+     cbc:	cc 24       	eor	r12, r12
+     cbe:	c3 94       	inc	r12
+     cc0:	d1 2c       	mov	r13, r1
+     cc2:	68 94       	set
+     cc4:	ee 24       	eor	r14, r14
+     cc6:	e1 f8       	bld	r14, 1
+     cc8:	f1 2c       	mov	r15, r1
+     cca:	04 e0       	ldi	r16, 0x04	; 4
+     ccc:	10 e0       	ldi	r17, 0x00	; 0
+     cce:	23 e0       	ldi	r18, 0x03	; 3
+     cd0:	30 e0       	ldi	r19, 0x00	; 0
+     cd2:	42 e0       	ldi	r20, 0x02	; 2
+     cd4:	50 e0       	ldi	r21, 0x00	; 0
+     cd6:	61 e0       	ldi	r22, 0x01	; 1
+     cd8:	70 e0       	ldi	r23, 0x00	; 0
+     cda:	82 e0       	ldi	r24, 0x02	; 2
+     cdc:	90 e0       	ldi	r25, 0x00	; 0
+     cde:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     ce2:	fb c2       	rjmp	.+1526   	; 0x12da <__stack+0xa7b>
+        case 9:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     ce4:	68 94       	set
+     ce6:	aa 24       	eor	r10, r10
+     ce8:	a1 f8       	bld	r10, 1
+     cea:	b1 2c       	mov	r11, r1
+     cec:	cc 24       	eor	r12, r12
+     cee:	c3 94       	inc	r12
+     cf0:	d1 2c       	mov	r13, r1
+     cf2:	68 94       	set
+     cf4:	ee 24       	eor	r14, r14
+     cf6:	e1 f8       	bld	r14, 1
+     cf8:	f1 2c       	mov	r15, r1
+     cfa:	04 e0       	ldi	r16, 0x04	; 4
+     cfc:	10 e0       	ldi	r17, 0x00	; 0
+     cfe:	23 e0       	ldi	r18, 0x03	; 3
+     d00:	30 e0       	ldi	r19, 0x00	; 0
+     d02:	42 e0       	ldi	r20, 0x02	; 2
+     d04:	50 e0       	ldi	r21, 0x00	; 0
+     d06:	61 e0       	ldi	r22, 0x01	; 1
+     d08:	70 e0       	ldi	r23, 0x00	; 0
+     d0a:	82 e0       	ldi	r24, 0x02	; 2
+     d0c:	90 e0       	ldi	r25, 0x00	; 0
+     d0e:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     d12:	e3 c2       	rjmp	.+1478   	; 0x12da <__stack+0xa7b>
+        break;
+    case 7:
+        switch (personNum)
+        {
+        case 1:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     d14:	68 94       	set
+     d16:	aa 24       	eor	r10, r10
+     d18:	a1 f8       	bld	r10, 1
+     d1a:	b1 2c       	mov	r11, r1
+     d1c:	cc 24       	eor	r12, r12
+     d1e:	c3 94       	inc	r12
+     d20:	d1 2c       	mov	r13, r1
+     d22:	68 94       	set
+     d24:	ee 24       	eor	r14, r14
+     d26:	e1 f8       	bld	r14, 1
+     d28:	f1 2c       	mov	r15, r1
+     d2a:	04 e0       	ldi	r16, 0x04	; 4
+     d2c:	10 e0       	ldi	r17, 0x00	; 0
+     d2e:	23 e0       	ldi	r18, 0x03	; 3
+     d30:	30 e0       	ldi	r19, 0x00	; 0
+     d32:	42 e0       	ldi	r20, 0x02	; 2
+     d34:	50 e0       	ldi	r21, 0x00	; 0
+     d36:	61 e0       	ldi	r22, 0x01	; 1
+     d38:	70 e0       	ldi	r23, 0x00	; 0
+     d3a:	82 e0       	ldi	r24, 0x02	; 2
+     d3c:	90 e0       	ldi	r25, 0x00	; 0
+     d3e:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     d42:	cb c2       	rjmp	.+1430   	; 0x12da <__stack+0xa7b>
+        case 2:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     d44:	68 94       	set
+     d46:	aa 24       	eor	r10, r10
+     d48:	a1 f8       	bld	r10, 1
+     d4a:	b1 2c       	mov	r11, r1
+     d4c:	cc 24       	eor	r12, r12
+     d4e:	c3 94       	inc	r12
+     d50:	d1 2c       	mov	r13, r1
+     d52:	68 94       	set
+     d54:	ee 24       	eor	r14, r14
+     d56:	e1 f8       	bld	r14, 1
+     d58:	f1 2c       	mov	r15, r1
+     d5a:	04 e0       	ldi	r16, 0x04	; 4
+     d5c:	10 e0       	ldi	r17, 0x00	; 0
+     d5e:	23 e0       	ldi	r18, 0x03	; 3
+     d60:	30 e0       	ldi	r19, 0x00	; 0
+     d62:	42 e0       	ldi	r20, 0x02	; 2
+     d64:	50 e0       	ldi	r21, 0x00	; 0
+     d66:	61 e0       	ldi	r22, 0x01	; 1
+     d68:	70 e0       	ldi	r23, 0x00	; 0
+     d6a:	82 e0       	ldi	r24, 0x02	; 2
+     d6c:	90 e0       	ldi	r25, 0x00	; 0
+     d6e:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     d72:	b3 c2       	rjmp	.+1382   	; 0x12da <__stack+0xa7b>
+        case 3:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     d74:	68 94       	set
+     d76:	aa 24       	eor	r10, r10
+     d78:	a1 f8       	bld	r10, 1
+     d7a:	b1 2c       	mov	r11, r1
+     d7c:	cc 24       	eor	r12, r12
+     d7e:	c3 94       	inc	r12
+     d80:	d1 2c       	mov	r13, r1
+     d82:	68 94       	set
+     d84:	ee 24       	eor	r14, r14
+     d86:	e1 f8       	bld	r14, 1
+     d88:	f1 2c       	mov	r15, r1
+     d8a:	04 e0       	ldi	r16, 0x04	; 4
+     d8c:	10 e0       	ldi	r17, 0x00	; 0
+     d8e:	23 e0       	ldi	r18, 0x03	; 3
+     d90:	30 e0       	ldi	r19, 0x00	; 0
+     d92:	42 e0       	ldi	r20, 0x02	; 2
+     d94:	50 e0       	ldi	r21, 0x00	; 0
+     d96:	61 e0       	ldi	r22, 0x01	; 1
+     d98:	70 e0       	ldi	r23, 0x00	; 0
+     d9a:	82 e0       	ldi	r24, 0x02	; 2
+     d9c:	90 e0       	ldi	r25, 0x00	; 0
+     d9e:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     da2:	9b c2       	rjmp	.+1334   	; 0x12da <__stack+0xa7b>
+        case 4:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     da4:	68 94       	set
+     da6:	aa 24       	eor	r10, r10
+     da8:	a1 f8       	bld	r10, 1
+     daa:	b1 2c       	mov	r11, r1
+     dac:	cc 24       	eor	r12, r12
+     dae:	c3 94       	inc	r12
+     db0:	d1 2c       	mov	r13, r1
+     db2:	68 94       	set
+     db4:	ee 24       	eor	r14, r14
+     db6:	e1 f8       	bld	r14, 1
+     db8:	f1 2c       	mov	r15, r1
+     dba:	04 e0       	ldi	r16, 0x04	; 4
+     dbc:	10 e0       	ldi	r17, 0x00	; 0
+     dbe:	23 e0       	ldi	r18, 0x03	; 3
+     dc0:	30 e0       	ldi	r19, 0x00	; 0
+     dc2:	42 e0       	ldi	r20, 0x02	; 2
+     dc4:	50 e0       	ldi	r21, 0x00	; 0
+     dc6:	61 e0       	ldi	r22, 0x01	; 1
+     dc8:	70 e0       	ldi	r23, 0x00	; 0
+     dca:	82 e0       	ldi	r24, 0x02	; 2
+     dcc:	90 e0       	ldi	r25, 0x00	; 0
+     dce:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     dd2:	83 c2       	rjmp	.+1286   	; 0x12da <__stack+0xa7b>
+        case 5:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     dd4:	68 94       	set
+     dd6:	aa 24       	eor	r10, r10
+     dd8:	a1 f8       	bld	r10, 1
+     dda:	b1 2c       	mov	r11, r1
+     ddc:	cc 24       	eor	r12, r12
+     dde:	c3 94       	inc	r12
+     de0:	d1 2c       	mov	r13, r1
+     de2:	68 94       	set
+     de4:	ee 24       	eor	r14, r14
+     de6:	e1 f8       	bld	r14, 1
+     de8:	f1 2c       	mov	r15, r1
+     dea:	04 e0       	ldi	r16, 0x04	; 4
+     dec:	10 e0       	ldi	r17, 0x00	; 0
+     dee:	23 e0       	ldi	r18, 0x03	; 3
+     df0:	30 e0       	ldi	r19, 0x00	; 0
+     df2:	42 e0       	ldi	r20, 0x02	; 2
+     df4:	50 e0       	ldi	r21, 0x00	; 0
+     df6:	61 e0       	ldi	r22, 0x01	; 1
+     df8:	70 e0       	ldi	r23, 0x00	; 0
+     dfa:	82 e0       	ldi	r24, 0x02	; 2
+     dfc:	90 e0       	ldi	r25, 0x00	; 0
+     dfe:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     e02:	6b c2       	rjmp	.+1238   	; 0x12da <__stack+0xa7b>
+        case 6:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     e04:	68 94       	set
+     e06:	aa 24       	eor	r10, r10
+     e08:	a1 f8       	bld	r10, 1
+     e0a:	b1 2c       	mov	r11, r1
+     e0c:	cc 24       	eor	r12, r12
+     e0e:	c3 94       	inc	r12
+     e10:	d1 2c       	mov	r13, r1
+     e12:	68 94       	set
+     e14:	ee 24       	eor	r14, r14
+     e16:	e1 f8       	bld	r14, 1
+     e18:	f1 2c       	mov	r15, r1
+     e1a:	04 e0       	ldi	r16, 0x04	; 4
+     e1c:	10 e0       	ldi	r17, 0x00	; 0
+     e1e:	23 e0       	ldi	r18, 0x03	; 3
+     e20:	30 e0       	ldi	r19, 0x00	; 0
+     e22:	42 e0       	ldi	r20, 0x02	; 2
+     e24:	50 e0       	ldi	r21, 0x00	; 0
+     e26:	61 e0       	ldi	r22, 0x01	; 1
+     e28:	70 e0       	ldi	r23, 0x00	; 0
+     e2a:	82 e0       	ldi	r24, 0x02	; 2
+     e2c:	90 e0       	ldi	r25, 0x00	; 0
+     e2e:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     e32:	53 c2       	rjmp	.+1190   	; 0x12da <__stack+0xa7b>
+        case 7:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     e34:	68 94       	set
+     e36:	aa 24       	eor	r10, r10
+     e38:	a1 f8       	bld	r10, 1
+     e3a:	b1 2c       	mov	r11, r1
+     e3c:	cc 24       	eor	r12, r12
+     e3e:	c3 94       	inc	r12
+     e40:	d1 2c       	mov	r13, r1
+     e42:	68 94       	set
+     e44:	ee 24       	eor	r14, r14
+     e46:	e1 f8       	bld	r14, 1
+     e48:	f1 2c       	mov	r15, r1
+     e4a:	04 e0       	ldi	r16, 0x04	; 4
+     e4c:	10 e0       	ldi	r17, 0x00	; 0
+     e4e:	23 e0       	ldi	r18, 0x03	; 3
+     e50:	30 e0       	ldi	r19, 0x00	; 0
+     e52:	42 e0       	ldi	r20, 0x02	; 2
+     e54:	50 e0       	ldi	r21, 0x00	; 0
+     e56:	61 e0       	ldi	r22, 0x01	; 1
+     e58:	70 e0       	ldi	r23, 0x00	; 0
+     e5a:	82 e0       	ldi	r24, 0x02	; 2
+     e5c:	90 e0       	ldi	r25, 0x00	; 0
+     e5e:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     e62:	3b c2       	rjmp	.+1142   	; 0x12da <__stack+0xa7b>
+        case 8:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     e64:	68 94       	set
+     e66:	aa 24       	eor	r10, r10
+     e68:	a1 f8       	bld	r10, 1
+     e6a:	b1 2c       	mov	r11, r1
+     e6c:	cc 24       	eor	r12, r12
+     e6e:	c3 94       	inc	r12
+     e70:	d1 2c       	mov	r13, r1
+     e72:	68 94       	set
+     e74:	ee 24       	eor	r14, r14
+     e76:	e1 f8       	bld	r14, 1
+     e78:	f1 2c       	mov	r15, r1
+     e7a:	04 e0       	ldi	r16, 0x04	; 4
+     e7c:	10 e0       	ldi	r17, 0x00	; 0
+     e7e:	23 e0       	ldi	r18, 0x03	; 3
+     e80:	30 e0       	ldi	r19, 0x00	; 0
+     e82:	42 e0       	ldi	r20, 0x02	; 2
+     e84:	50 e0       	ldi	r21, 0x00	; 0
+     e86:	61 e0       	ldi	r22, 0x01	; 1
+     e88:	70 e0       	ldi	r23, 0x00	; 0
+     e8a:	82 e0       	ldi	r24, 0x02	; 2
+     e8c:	90 e0       	ldi	r25, 0x00	; 0
+     e8e:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     e92:	23 c2       	rjmp	.+1094   	; 0x12da <__stack+0xa7b>
+        case 9:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     e94:	68 94       	set
+     e96:	aa 24       	eor	r10, r10
+     e98:	a1 f8       	bld	r10, 1
+     e9a:	b1 2c       	mov	r11, r1
+     e9c:	cc 24       	eor	r12, r12
+     e9e:	c3 94       	inc	r12
+     ea0:	d1 2c       	mov	r13, r1
+     ea2:	68 94       	set
+     ea4:	ee 24       	eor	r14, r14
+     ea6:	e1 f8       	bld	r14, 1
+     ea8:	f1 2c       	mov	r15, r1
+     eaa:	04 e0       	ldi	r16, 0x04	; 4
+     eac:	10 e0       	ldi	r17, 0x00	; 0
+     eae:	23 e0       	ldi	r18, 0x03	; 3
+     eb0:	30 e0       	ldi	r19, 0x00	; 0
+     eb2:	42 e0       	ldi	r20, 0x02	; 2
+     eb4:	50 e0       	ldi	r21, 0x00	; 0
+     eb6:	61 e0       	ldi	r22, 0x01	; 1
+     eb8:	70 e0       	ldi	r23, 0x00	; 0
+     eba:	82 e0       	ldi	r24, 0x02	; 2
+     ebc:	90 e0       	ldi	r25, 0x00	; 0
+     ebe:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     ec2:	0b c2       	rjmp	.+1046   	; 0x12da <__stack+0xa7b>
+        break;
+    case 8:
+        switch (personNum)
+        {
+        case 1:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     ec4:	68 94       	set
+     ec6:	aa 24       	eor	r10, r10
+     ec8:	a1 f8       	bld	r10, 1
+     eca:	b1 2c       	mov	r11, r1
+     ecc:	cc 24       	eor	r12, r12
+     ece:	c3 94       	inc	r12
+     ed0:	d1 2c       	mov	r13, r1
+     ed2:	68 94       	set
+     ed4:	ee 24       	eor	r14, r14
+     ed6:	e1 f8       	bld	r14, 1
+     ed8:	f1 2c       	mov	r15, r1
+     eda:	04 e0       	ldi	r16, 0x04	; 4
+     edc:	10 e0       	ldi	r17, 0x00	; 0
+     ede:	23 e0       	ldi	r18, 0x03	; 3
+     ee0:	30 e0       	ldi	r19, 0x00	; 0
+     ee2:	42 e0       	ldi	r20, 0x02	; 2
+     ee4:	50 e0       	ldi	r21, 0x00	; 0
+     ee6:	61 e0       	ldi	r22, 0x01	; 1
+     ee8:	70 e0       	ldi	r23, 0x00	; 0
+     eea:	82 e0       	ldi	r24, 0x02	; 2
+     eec:	90 e0       	ldi	r25, 0x00	; 0
+     eee:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     ef2:	f3 c1       	rjmp	.+998    	; 0x12da <__stack+0xa7b>
+        case 2:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     ef4:	68 94       	set
+     ef6:	aa 24       	eor	r10, r10
+     ef8:	a1 f8       	bld	r10, 1
+     efa:	b1 2c       	mov	r11, r1
+     efc:	cc 24       	eor	r12, r12
+     efe:	c3 94       	inc	r12
+     f00:	d1 2c       	mov	r13, r1
+     f02:	68 94       	set
+     f04:	ee 24       	eor	r14, r14
+     f06:	e1 f8       	bld	r14, 1
+     f08:	f1 2c       	mov	r15, r1
+     f0a:	04 e0       	ldi	r16, 0x04	; 4
+     f0c:	10 e0       	ldi	r17, 0x00	; 0
+     f0e:	23 e0       	ldi	r18, 0x03	; 3
+     f10:	30 e0       	ldi	r19, 0x00	; 0
+     f12:	42 e0       	ldi	r20, 0x02	; 2
+     f14:	50 e0       	ldi	r21, 0x00	; 0
+     f16:	61 e0       	ldi	r22, 0x01	; 1
+     f18:	70 e0       	ldi	r23, 0x00	; 0
+     f1a:	82 e0       	ldi	r24, 0x02	; 2
+     f1c:	90 e0       	ldi	r25, 0x00	; 0
+     f1e:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     f22:	db c1       	rjmp	.+950    	; 0x12da <__stack+0xa7b>
+        case 3:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     f24:	68 94       	set
+     f26:	aa 24       	eor	r10, r10
+     f28:	a1 f8       	bld	r10, 1
+     f2a:	b1 2c       	mov	r11, r1
+     f2c:	cc 24       	eor	r12, r12
+     f2e:	c3 94       	inc	r12
+     f30:	d1 2c       	mov	r13, r1
+     f32:	68 94       	set
+     f34:	ee 24       	eor	r14, r14
+     f36:	e1 f8       	bld	r14, 1
+     f38:	f1 2c       	mov	r15, r1
+     f3a:	04 e0       	ldi	r16, 0x04	; 4
+     f3c:	10 e0       	ldi	r17, 0x00	; 0
+     f3e:	23 e0       	ldi	r18, 0x03	; 3
+     f40:	30 e0       	ldi	r19, 0x00	; 0
+     f42:	42 e0       	ldi	r20, 0x02	; 2
+     f44:	50 e0       	ldi	r21, 0x00	; 0
+     f46:	61 e0       	ldi	r22, 0x01	; 1
+     f48:	70 e0       	ldi	r23, 0x00	; 0
+     f4a:	82 e0       	ldi	r24, 0x02	; 2
+     f4c:	90 e0       	ldi	r25, 0x00	; 0
+     f4e:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     f52:	c3 c1       	rjmp	.+902    	; 0x12da <__stack+0xa7b>
+        case 4:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     f54:	68 94       	set
+     f56:	aa 24       	eor	r10, r10
+     f58:	a1 f8       	bld	r10, 1
+     f5a:	b1 2c       	mov	r11, r1
+     f5c:	cc 24       	eor	r12, r12
+     f5e:	c3 94       	inc	r12
+     f60:	d1 2c       	mov	r13, r1
+     f62:	68 94       	set
+     f64:	ee 24       	eor	r14, r14
+     f66:	e1 f8       	bld	r14, 1
+     f68:	f1 2c       	mov	r15, r1
+     f6a:	04 e0       	ldi	r16, 0x04	; 4
+     f6c:	10 e0       	ldi	r17, 0x00	; 0
+     f6e:	23 e0       	ldi	r18, 0x03	; 3
+     f70:	30 e0       	ldi	r19, 0x00	; 0
+     f72:	42 e0       	ldi	r20, 0x02	; 2
+     f74:	50 e0       	ldi	r21, 0x00	; 0
+     f76:	61 e0       	ldi	r22, 0x01	; 1
+     f78:	70 e0       	ldi	r23, 0x00	; 0
+     f7a:	82 e0       	ldi	r24, 0x02	; 2
+     f7c:	90 e0       	ldi	r25, 0x00	; 0
+     f7e:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     f82:	ab c1       	rjmp	.+854    	; 0x12da <__stack+0xa7b>
+        case 5:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     f84:	68 94       	set
+     f86:	aa 24       	eor	r10, r10
+     f88:	a1 f8       	bld	r10, 1
+     f8a:	b1 2c       	mov	r11, r1
+     f8c:	cc 24       	eor	r12, r12
+     f8e:	c3 94       	inc	r12
+     f90:	d1 2c       	mov	r13, r1
+     f92:	68 94       	set
+     f94:	ee 24       	eor	r14, r14
+     f96:	e1 f8       	bld	r14, 1
+     f98:	f1 2c       	mov	r15, r1
+     f9a:	04 e0       	ldi	r16, 0x04	; 4
+     f9c:	10 e0       	ldi	r17, 0x00	; 0
+     f9e:	23 e0       	ldi	r18, 0x03	; 3
+     fa0:	30 e0       	ldi	r19, 0x00	; 0
+     fa2:	42 e0       	ldi	r20, 0x02	; 2
+     fa4:	50 e0       	ldi	r21, 0x00	; 0
+     fa6:	61 e0       	ldi	r22, 0x01	; 1
+     fa8:	70 e0       	ldi	r23, 0x00	; 0
+     faa:	82 e0       	ldi	r24, 0x02	; 2
+     fac:	90 e0       	ldi	r25, 0x00	; 0
+     fae:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     fb2:	93 c1       	rjmp	.+806    	; 0x12da <__stack+0xa7b>
+        case 6:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     fb4:	68 94       	set
+     fb6:	aa 24       	eor	r10, r10
+     fb8:	a1 f8       	bld	r10, 1
+     fba:	b1 2c       	mov	r11, r1
+     fbc:	cc 24       	eor	r12, r12
+     fbe:	c3 94       	inc	r12
+     fc0:	d1 2c       	mov	r13, r1
+     fc2:	68 94       	set
+     fc4:	ee 24       	eor	r14, r14
+     fc6:	e1 f8       	bld	r14, 1
+     fc8:	f1 2c       	mov	r15, r1
+     fca:	04 e0       	ldi	r16, 0x04	; 4
+     fcc:	10 e0       	ldi	r17, 0x00	; 0
+     fce:	23 e0       	ldi	r18, 0x03	; 3
+     fd0:	30 e0       	ldi	r19, 0x00	; 0
+     fd2:	42 e0       	ldi	r20, 0x02	; 2
+     fd4:	50 e0       	ldi	r21, 0x00	; 0
+     fd6:	61 e0       	ldi	r22, 0x01	; 1
+     fd8:	70 e0       	ldi	r23, 0x00	; 0
+     fda:	82 e0       	ldi	r24, 0x02	; 2
+     fdc:	90 e0       	ldi	r25, 0x00	; 0
+     fde:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+     fe2:	7b c1       	rjmp	.+758    	; 0x12da <__stack+0xa7b>
+        case 7:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+     fe4:	68 94       	set
+     fe6:	aa 24       	eor	r10, r10
+     fe8:	a1 f8       	bld	r10, 1
+     fea:	b1 2c       	mov	r11, r1
+     fec:	cc 24       	eor	r12, r12
+     fee:	c3 94       	inc	r12
+     ff0:	d1 2c       	mov	r13, r1
+     ff2:	68 94       	set
+     ff4:	ee 24       	eor	r14, r14
+     ff6:	e1 f8       	bld	r14, 1
+     ff8:	f1 2c       	mov	r15, r1
+     ffa:	04 e0       	ldi	r16, 0x04	; 4
+     ffc:	10 e0       	ldi	r17, 0x00	; 0
+     ffe:	23 e0       	ldi	r18, 0x03	; 3
+    1000:	30 e0       	ldi	r19, 0x00	; 0
+    1002:	42 e0       	ldi	r20, 0x02	; 2
+    1004:	50 e0       	ldi	r21, 0x00	; 0
+    1006:	61 e0       	ldi	r22, 0x01	; 1
+    1008:	70 e0       	ldi	r23, 0x00	; 0
+    100a:	82 e0       	ldi	r24, 0x02	; 2
+    100c:	90 e0       	ldi	r25, 0x00	; 0
+    100e:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+    1012:	63 c1       	rjmp	.+710    	; 0x12da <__stack+0xa7b>
+        case 8:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+    1014:	68 94       	set
+    1016:	aa 24       	eor	r10, r10
+    1018:	a1 f8       	bld	r10, 1
+    101a:	b1 2c       	mov	r11, r1
+    101c:	cc 24       	eor	r12, r12
+    101e:	c3 94       	inc	r12
+    1020:	d1 2c       	mov	r13, r1
+    1022:	68 94       	set
+    1024:	ee 24       	eor	r14, r14
+    1026:	e1 f8       	bld	r14, 1
+    1028:	f1 2c       	mov	r15, r1
+    102a:	04 e0       	ldi	r16, 0x04	; 4
+    102c:	10 e0       	ldi	r17, 0x00	; 0
+    102e:	23 e0       	ldi	r18, 0x03	; 3
+    1030:	30 e0       	ldi	r19, 0x00	; 0
+    1032:	42 e0       	ldi	r20, 0x02	; 2
+    1034:	50 e0       	ldi	r21, 0x00	; 0
+    1036:	61 e0       	ldi	r22, 0x01	; 1
+    1038:	70 e0       	ldi	r23, 0x00	; 0
+    103a:	82 e0       	ldi	r24, 0x02	; 2
+    103c:	90 e0       	ldi	r25, 0x00	; 0
+    103e:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+    1042:	4b c1       	rjmp	.+662    	; 0x12da <__stack+0xa7b>
+        case 9:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+    1044:	68 94       	set
+    1046:	aa 24       	eor	r10, r10
+    1048:	a1 f8       	bld	r10, 1
+    104a:	b1 2c       	mov	r11, r1
+    104c:	cc 24       	eor	r12, r12
+    104e:	c3 94       	inc	r12
+    1050:	d1 2c       	mov	r13, r1
+    1052:	68 94       	set
+    1054:	ee 24       	eor	r14, r14
+    1056:	e1 f8       	bld	r14, 1
+    1058:	f1 2c       	mov	r15, r1
+    105a:	04 e0       	ldi	r16, 0x04	; 4
+    105c:	10 e0       	ldi	r17, 0x00	; 0
+    105e:	23 e0       	ldi	r18, 0x03	; 3
+    1060:	30 e0       	ldi	r19, 0x00	; 0
+    1062:	42 e0       	ldi	r20, 0x02	; 2
+    1064:	50 e0       	ldi	r21, 0x00	; 0
+    1066:	61 e0       	ldi	r22, 0x01	; 1
+    1068:	70 e0       	ldi	r23, 0x00	; 0
+    106a:	82 e0       	ldi	r24, 0x02	; 2
+    106c:	90 e0       	ldi	r25, 0x00	; 0
+    106e:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+    1072:	33 c1       	rjmp	.+614    	; 0x12da <__stack+0xa7b>
+        break;
+    case 9:
+        switch (personNum)
+        {
+        case 1:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+    1074:	68 94       	set
+    1076:	aa 24       	eor	r10, r10
+    1078:	a1 f8       	bld	r10, 1
+    107a:	b1 2c       	mov	r11, r1
+    107c:	cc 24       	eor	r12, r12
+    107e:	c3 94       	inc	r12
+    1080:	d1 2c       	mov	r13, r1
+    1082:	68 94       	set
+    1084:	ee 24       	eor	r14, r14
+    1086:	e1 f8       	bld	r14, 1
+    1088:	f1 2c       	mov	r15, r1
+    108a:	04 e0       	ldi	r16, 0x04	; 4
+    108c:	10 e0       	ldi	r17, 0x00	; 0
+    108e:	23 e0       	ldi	r18, 0x03	; 3
+    1090:	30 e0       	ldi	r19, 0x00	; 0
+    1092:	42 e0       	ldi	r20, 0x02	; 2
+    1094:	50 e0       	ldi	r21, 0x00	; 0
+    1096:	61 e0       	ldi	r22, 0x01	; 1
+    1098:	70 e0       	ldi	r23, 0x00	; 0
+    109a:	82 e0       	ldi	r24, 0x02	; 2
+    109c:	90 e0       	ldi	r25, 0x00	; 0
+    109e:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+    10a2:	1b c1       	rjmp	.+566    	; 0x12da <__stack+0xa7b>
+        case 2:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+    10a4:	68 94       	set
+    10a6:	aa 24       	eor	r10, r10
+    10a8:	a1 f8       	bld	r10, 1
+    10aa:	b1 2c       	mov	r11, r1
+    10ac:	cc 24       	eor	r12, r12
+    10ae:	c3 94       	inc	r12
+    10b0:	d1 2c       	mov	r13, r1
+    10b2:	68 94       	set
+    10b4:	ee 24       	eor	r14, r14
+    10b6:	e1 f8       	bld	r14, 1
+    10b8:	f1 2c       	mov	r15, r1
+    10ba:	04 e0       	ldi	r16, 0x04	; 4
+    10bc:	10 e0       	ldi	r17, 0x00	; 0
+    10be:	23 e0       	ldi	r18, 0x03	; 3
+    10c0:	30 e0       	ldi	r19, 0x00	; 0
+    10c2:	42 e0       	ldi	r20, 0x02	; 2
+    10c4:	50 e0       	ldi	r21, 0x00	; 0
+    10c6:	61 e0       	ldi	r22, 0x01	; 1
+    10c8:	70 e0       	ldi	r23, 0x00	; 0
+    10ca:	82 e0       	ldi	r24, 0x02	; 2
+    10cc:	90 e0       	ldi	r25, 0x00	; 0
+    10ce:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+    10d2:	03 c1       	rjmp	.+518    	; 0x12da <__stack+0xa7b>
+        case 3:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+    10d4:	68 94       	set
+    10d6:	aa 24       	eor	r10, r10
+    10d8:	a1 f8       	bld	r10, 1
+    10da:	b1 2c       	mov	r11, r1
+    10dc:	cc 24       	eor	r12, r12
+    10de:	c3 94       	inc	r12
+    10e0:	d1 2c       	mov	r13, r1
+    10e2:	68 94       	set
+    10e4:	ee 24       	eor	r14, r14
+    10e6:	e1 f8       	bld	r14, 1
+    10e8:	f1 2c       	mov	r15, r1
+    10ea:	04 e0       	ldi	r16, 0x04	; 4
+    10ec:	10 e0       	ldi	r17, 0x00	; 0
+    10ee:	23 e0       	ldi	r18, 0x03	; 3
+    10f0:	30 e0       	ldi	r19, 0x00	; 0
+    10f2:	42 e0       	ldi	r20, 0x02	; 2
+    10f4:	50 e0       	ldi	r21, 0x00	; 0
+    10f6:	61 e0       	ldi	r22, 0x01	; 1
+    10f8:	70 e0       	ldi	r23, 0x00	; 0
+    10fa:	82 e0       	ldi	r24, 0x02	; 2
+    10fc:	90 e0       	ldi	r25, 0x00	; 0
+    10fe:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+    1102:	eb c0       	rjmp	.+470    	; 0x12da <__stack+0xa7b>
+        case 4:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+    1104:	68 94       	set
+    1106:	aa 24       	eor	r10, r10
+    1108:	a1 f8       	bld	r10, 1
+    110a:	b1 2c       	mov	r11, r1
+    110c:	cc 24       	eor	r12, r12
+    110e:	c3 94       	inc	r12
+    1110:	d1 2c       	mov	r13, r1
+    1112:	68 94       	set
+    1114:	ee 24       	eor	r14, r14
+    1116:	e1 f8       	bld	r14, 1
+    1118:	f1 2c       	mov	r15, r1
+    111a:	04 e0       	ldi	r16, 0x04	; 4
+    111c:	10 e0       	ldi	r17, 0x00	; 0
+    111e:	23 e0       	ldi	r18, 0x03	; 3
+    1120:	30 e0       	ldi	r19, 0x00	; 0
+    1122:	42 e0       	ldi	r20, 0x02	; 2
+    1124:	50 e0       	ldi	r21, 0x00	; 0
+    1126:	61 e0       	ldi	r22, 0x01	; 1
+    1128:	70 e0       	ldi	r23, 0x00	; 0
+    112a:	82 e0       	ldi	r24, 0x02	; 2
+    112c:	90 e0       	ldi	r25, 0x00	; 0
+    112e:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+    1132:	d3 c0       	rjmp	.+422    	; 0x12da <__stack+0xa7b>
+        case 5:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+    1134:	68 94       	set
+    1136:	aa 24       	eor	r10, r10
+    1138:	a1 f8       	bld	r10, 1
+    113a:	b1 2c       	mov	r11, r1
+    113c:	cc 24       	eor	r12, r12
+    113e:	c3 94       	inc	r12
+    1140:	d1 2c       	mov	r13, r1
+    1142:	68 94       	set
+    1144:	ee 24       	eor	r14, r14
+    1146:	e1 f8       	bld	r14, 1
+    1148:	f1 2c       	mov	r15, r1
+    114a:	04 e0       	ldi	r16, 0x04	; 4
+    114c:	10 e0       	ldi	r17, 0x00	; 0
+    114e:	23 e0       	ldi	r18, 0x03	; 3
+    1150:	30 e0       	ldi	r19, 0x00	; 0
+    1152:	42 e0       	ldi	r20, 0x02	; 2
+    1154:	50 e0       	ldi	r21, 0x00	; 0
+    1156:	61 e0       	ldi	r22, 0x01	; 1
+    1158:	70 e0       	ldi	r23, 0x00	; 0
+    115a:	82 e0       	ldi	r24, 0x02	; 2
+    115c:	90 e0       	ldi	r25, 0x00	; 0
+    115e:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+    1162:	bb c0       	rjmp	.+374    	; 0x12da <__stack+0xa7b>
+        case 6:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+    1164:	68 94       	set
+    1166:	aa 24       	eor	r10, r10
+    1168:	a1 f8       	bld	r10, 1
+    116a:	b1 2c       	mov	r11, r1
+    116c:	cc 24       	eor	r12, r12
+    116e:	c3 94       	inc	r12
+    1170:	d1 2c       	mov	r13, r1
+    1172:	68 94       	set
+    1174:	ee 24       	eor	r14, r14
+    1176:	e1 f8       	bld	r14, 1
+    1178:	f1 2c       	mov	r15, r1
+    117a:	04 e0       	ldi	r16, 0x04	; 4
+    117c:	10 e0       	ldi	r17, 0x00	; 0
+    117e:	23 e0       	ldi	r18, 0x03	; 3
+    1180:	30 e0       	ldi	r19, 0x00	; 0
+    1182:	42 e0       	ldi	r20, 0x02	; 2
+    1184:	50 e0       	ldi	r21, 0x00	; 0
+    1186:	61 e0       	ldi	r22, 0x01	; 1
+    1188:	70 e0       	ldi	r23, 0x00	; 0
+    118a:	82 e0       	ldi	r24, 0x02	; 2
+    118c:	90 e0       	ldi	r25, 0x00	; 0
+    118e:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+    1192:	a3 c0       	rjmp	.+326    	; 0x12da <__stack+0xa7b>
+        case 7:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+    1194:	68 94       	set
+    1196:	aa 24       	eor	r10, r10
+    1198:	a1 f8       	bld	r10, 1
+    119a:	b1 2c       	mov	r11, r1
+    119c:	cc 24       	eor	r12, r12
+    119e:	c3 94       	inc	r12
+    11a0:	d1 2c       	mov	r13, r1
+    11a2:	68 94       	set
+    11a4:	ee 24       	eor	r14, r14
+    11a6:	e1 f8       	bld	r14, 1
+    11a8:	f1 2c       	mov	r15, r1
+    11aa:	04 e0       	ldi	r16, 0x04	; 4
+    11ac:	10 e0       	ldi	r17, 0x00	; 0
+    11ae:	23 e0       	ldi	r18, 0x03	; 3
+    11b0:	30 e0       	ldi	r19, 0x00	; 0
+    11b2:	42 e0       	ldi	r20, 0x02	; 2
+    11b4:	50 e0       	ldi	r21, 0x00	; 0
+    11b6:	61 e0       	ldi	r22, 0x01	; 1
+    11b8:	70 e0       	ldi	r23, 0x00	; 0
+    11ba:	82 e0       	ldi	r24, 0x02	; 2
+    11bc:	90 e0       	ldi	r25, 0x00	; 0
+    11be:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+    11c2:	8b c0       	rjmp	.+278    	; 0x12da <__stack+0xa7b>
+        case 8:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+    11c4:	68 94       	set
+    11c6:	aa 24       	eor	r10, r10
+    11c8:	a1 f8       	bld	r10, 1
+    11ca:	b1 2c       	mov	r11, r1
+    11cc:	cc 24       	eor	r12, r12
+    11ce:	c3 94       	inc	r12
+    11d0:	d1 2c       	mov	r13, r1
+    11d2:	68 94       	set
+    11d4:	ee 24       	eor	r14, r14
+    11d6:	e1 f8       	bld	r14, 1
+    11d8:	f1 2c       	mov	r15, r1
+    11da:	04 e0       	ldi	r16, 0x04	; 4
+    11dc:	10 e0       	ldi	r17, 0x00	; 0
+    11de:	23 e0       	ldi	r18, 0x03	; 3
+    11e0:	30 e0       	ldi	r19, 0x00	; 0
+    11e2:	42 e0       	ldi	r20, 0x02	; 2
+    11e4:	50 e0       	ldi	r21, 0x00	; 0
+    11e6:	61 e0       	ldi	r22, 0x01	; 1
+    11e8:	70 e0       	ldi	r23, 0x00	; 0
+    11ea:	82 e0       	ldi	r24, 0x02	; 2
+    11ec:	90 e0       	ldi	r25, 0x00	; 0
+    11ee:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+    11f2:	73 c0       	rjmp	.+230    	; 0x12da <__stack+0xa7b>
+        case 9:
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+    11f4:	68 94       	set
+    11f6:	aa 24       	eor	r10, r10
+    11f8:	a1 f8       	bld	r10, 1
+    11fa:	b1 2c       	mov	r11, r1
+    11fc:	cc 24       	eor	r12, r12
+    11fe:	c3 94       	inc	r12
+    1200:	d1 2c       	mov	r13, r1
+    1202:	68 94       	set
+    1204:	ee 24       	eor	r14, r14
+    1206:	e1 f8       	bld	r14, 1
+    1208:	f1 2c       	mov	r15, r1
+    120a:	04 e0       	ldi	r16, 0x04	; 4
+    120c:	10 e0       	ldi	r17, 0x00	; 0
+    120e:	23 e0       	ldi	r18, 0x03	; 3
+    1210:	30 e0       	ldi	r19, 0x00	; 0
+    1212:	42 e0       	ldi	r20, 0x02	; 2
+    1214:	50 e0       	ldi	r21, 0x00	; 0
+    1216:	61 e0       	ldi	r22, 0x01	; 1
+    1218:	70 e0       	ldi	r23, 0x00	; 0
+    121a:	82 e0       	ldi	r24, 0x02	; 2
+    121c:	90 e0       	ldi	r25, 0x00	; 0
+    121e:	0e 94 87 00 	call	0x10e	; 0x10e <addspicy>
+            break;
+    1222:	5b c0       	rjmp	.+182    	; 0x12da <__stack+0xa7b>
+        {
+            if (PINB & (1 << 1))
+            {
+                if (PINB & (1 << 2))
+                {
+                    personNum = 7;
+    1224:	e7 e0       	ldi	r30, 0x07	; 7
+    1226:	f0 e0       	ldi	r31, 0x00	; 0
+    1228:	4f c8       	rjmp	.-3938   	; 0x2c8 <main+0x4e>
+                }
+            }
+            else if (PINB & (1 << 2))
+
+            {
+                personNum = 5;
+    122a:	e5 e0       	ldi	r30, 0x05	; 5
+    122c:	f0 e0       	ldi	r31, 0x00	; 0
+    122e:	4c c8       	rjmp	.-3944   	; 0x2c8 <main+0x4e>
+            }
+            else if (PINB & (1 << 3))
+            {
+                personNum = 9;
+    1230:	e9 e0       	ldi	r30, 0x09	; 9
+    1232:	f0 e0       	ldi	r31, 0x00	; 0
+    1234:	49 c8       	rjmp	.-3950   	; 0x2c8 <main+0x4e>
+        }
+        else if (PINB & (1 << 1))
+        {
+            if (PINB & (1 << 2))
+            {
+                personNum = 6;
+    1236:	e6 e0       	ldi	r30, 0x06	; 6
+    1238:	f0 e0       	ldi	r31, 0x00	; 0
+    123a:	46 c8       	rjmp	.-3956   	; 0x2c8 <main+0x4e>
+                personNum = 2;
+            }
+        }
+        else if (PINB & (1 << 3))
+        {
+            personNum = 8;
+    123c:	e8 e0       	ldi	r30, 0x08	; 8
+    123e:	f0 e0       	ldi	r31, 0x00	; 0
+    1240:	43 c8       	rjmp	.-3962   	; 0x2c8 <main+0x4e>
+        }
+        else if (PINB & (1 << 2))
+        {
+            personNum = 4;
+    1242:	e4 e0       	ldi	r30, 0x04	; 4
+    1244:	f0 e0       	ldi	r31, 0x00	; 0
+    1246:	40 c8       	rjmp	.-3968   	; 0x2c8 <main+0x4e>
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+            break;
+        }
+        break;
+    case 5:
+        switch (personNum)
+    1248:	31 97       	sbiw	r30, 0x01	; 1
+    124a:	e9 30       	cpi	r30, 0x09	; 9
+    124c:	f1 05       	cpc	r31, r1
+    124e:	08 f0       	brcs	.+2      	; 0x1252 <__stack+0x9f3>
+    1250:	44 c0       	rjmp	.+136    	; 0x12da <__stack+0xa7b>
+    1252:	e6 5d       	subi	r30, 0xD6	; 214
+    1254:	ff 4f       	sbci	r31, 0xFF	; 255
+    1256:	0c 94 78 09 	jmp	0x12f0	; 0x12f0 <__tablejump2__>
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+            break;
+        }
+        break;
+    case 9:
+        switch (personNum)
+    125a:	31 97       	sbiw	r30, 0x01	; 1
+    125c:	e9 30       	cpi	r30, 0x09	; 9
+    125e:	f1 05       	cpc	r31, r1
+    1260:	e0 f5       	brcc	.+120    	; 0x12da <__stack+0xa7b>
+    1262:	ed 5c       	subi	r30, 0xCD	; 205
+    1264:	ff 4f       	sbci	r31, 0xFF	; 255
+    1266:	0c 94 78 09 	jmp	0x12f0	; 0x12f0 <__tablejump2__>
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+            break;
+        }
+        break;
+    case 4:
+        switch (personNum)
+    126a:	31 97       	sbiw	r30, 0x01	; 1
+    126c:	e9 30       	cpi	r30, 0x09	; 9
+    126e:	f1 05       	cpc	r31, r1
+    1270:	a0 f5       	brcc	.+104    	; 0x12da <__stack+0xa7b>
+    1272:	e4 5c       	subi	r30, 0xC4	; 196
+    1274:	ff 4f       	sbci	r31, 0xFF	; 255
+    1276:	0c 94 78 09 	jmp	0x12f0	; 0x12f0 <__tablejump2__>
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+            break;
+        }
+        break;
+    case 8:
+        switch (personNum)
+    127a:	31 97       	sbiw	r30, 0x01	; 1
+    127c:	e9 30       	cpi	r30, 0x09	; 9
+    127e:	f1 05       	cpc	r31, r1
+    1280:	60 f5       	brcc	.+88     	; 0x12da <__stack+0xa7b>
+    1282:	eb 5b       	subi	r30, 0xBB	; 187
+    1284:	ff 4f       	sbci	r31, 0xFF	; 255
+    1286:	0c 94 78 09 	jmp	0x12f0	; 0x12f0 <__tablejump2__>
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+            break;
+        }
+        break;
+    case 3:
+        switch (personNum)
+    128a:	31 97       	sbiw	r30, 0x01	; 1
+    128c:	e9 30       	cpi	r30, 0x09	; 9
+    128e:	f1 05       	cpc	r31, r1
+    1290:	20 f5       	brcc	.+72     	; 0x12da <__stack+0xa7b>
+    1292:	e2 5b       	subi	r30, 0xB2	; 178
+    1294:	ff 4f       	sbci	r31, 0xFF	; 255
+    1296:	0c 94 78 09 	jmp	0x12f0	; 0x12f0 <__tablejump2__>
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+            break;
+        }
+        break;
+    case 7:
+        switch (personNum)
+    129a:	31 97       	sbiw	r30, 0x01	; 1
+    129c:	e9 30       	cpi	r30, 0x09	; 9
+    129e:	f1 05       	cpc	r31, r1
+    12a0:	e0 f4       	brcc	.+56     	; 0x12da <__stack+0xa7b>
+    12a2:	e9 5a       	subi	r30, 0xA9	; 169
+    12a4:	ff 4f       	sbci	r31, 0xFF	; 255
+    12a6:	0c 94 78 09 	jmp	0x12f0	; 0x12f0 <__tablejump2__>
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+            break;
+        }
+        break;
+    case 2:
+        switch (personNum)
+    12aa:	31 97       	sbiw	r30, 0x01	; 1
+    12ac:	e9 30       	cpi	r30, 0x09	; 9
+    12ae:	f1 05       	cpc	r31, r1
+    12b0:	a0 f4       	brcc	.+40     	; 0x12da <__stack+0xa7b>
+    12b2:	e0 5a       	subi	r30, 0xA0	; 160
+    12b4:	ff 4f       	sbci	r31, 0xFF	; 255
+    12b6:	0c 94 78 09 	jmp	0x12f0	; 0x12f0 <__tablejump2__>
+            addspicy(2, 1, 2, 3, 4, 2, 1, 2);
+            break;
+        }
+        break;
+    case 6:
+        switch (personNum)
+    12ba:	31 97       	sbiw	r30, 0x01	; 1
+    12bc:	e9 30       	cpi	r30, 0x09	; 9
+    12be:	f1 05       	cpc	r31, r1
+    12c0:	60 f4       	brcc	.+24     	; 0x12da <__stack+0xa7b>
+    12c2:	e7 59       	subi	r30, 0x97	; 151
+    12c4:	ff 4f       	sbci	r31, 0xFF	; 255
+    12c6:	0c 94 78 09 	jmp	0x12f0	; 0x12f0 <__tablejump2__>
+
+    //adding spicy according to curry and person number
+    switch (curryNum)
+    {
+    case 1:
+        switch (personNum)
+    12ca:	31 97       	sbiw	r30, 0x01	; 1
+    12cc:	e9 30       	cpi	r30, 0x09	; 9
+    12ce:	f1 05       	cpc	r31, r1
+    12d0:	20 f4       	brcc	.+8      	; 0x12da <__stack+0xa7b>
+    12d2:	ee 58       	subi	r30, 0x8E	; 142
+    12d4:	ff 4f       	sbci	r31, 0xFF	; 255
+    12d6:	0c 94 78 09 	jmp	0x12f0	; 0x12f0 <__tablejump2__>
+        }
+        break;
+    }
+	
+	
+}
+    12da:	80 e0       	ldi	r24, 0x00	; 0
+    12dc:	90 e0       	ldi	r25, 0x00	; 0
+    12de:	1f 91       	pop	r17
+    12e0:	0f 91       	pop	r16
+    12e2:	ff 90       	pop	r15
+    12e4:	ef 90       	pop	r14
+    12e6:	df 90       	pop	r13
+    12e8:	cf 90       	pop	r12
+    12ea:	bf 90       	pop	r11
+    12ec:	af 90       	pop	r10
+    12ee:	08 95       	ret
+
+000012f0 <__tablejump2__>:
+    12f0:	ee 0f       	add	r30, r30
+    12f2:	ff 1f       	adc	r31, r31
+    12f4:	05 90       	lpm	r0, Z+
+    12f6:	f4 91       	lpm	r31, Z
+    12f8:	e0 2d       	mov	r30, r0
+    12fa:	09 94       	ijmp
+
+000012fc <_exit>:
+    12fc:	f8 94       	cli
+
+000012fe <__stop_program>:
+    12fe:	ff cf       	rjmp	.-2      	; 0x12fe <__stop_program>
